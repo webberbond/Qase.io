@@ -1,0 +1,355 @@
+2023-04-03 19:06:46 DEBUG - initialize Chrome Window
+2023-04-03 19:06:48 INFO - Maximize Window
+2023-04-03 19:06:57 INFO - Click Login button button
+2023-04-03 19:06:57 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:06:59 INFO - Clear Email field text field
+2023-04-03 19:06:59 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:06:59 INFO - Sending keys Email field text field
+2023-04-03 19:06:59 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:00 INFO - Clear Password field text field
+2023-04-03 19:07:00 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:00 INFO - Sending keys Password field text field
+2023-04-03 19:07:00 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:00 INFO - Click Login button button
+2023-04-03 19:07:00 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:07:03 INFO - Click Create project button button
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #createButton
+2023-04-03 19:07:03 INFO - Clear Project name input text field
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:07:03 INFO - Sending keys Project name input text field
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:07:03 INFO - Clear Project code input text field
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:07:03 INFO - Sending keys Project code input text field
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:07:03 INFO - Clear Project description input text field
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:07:03 INFO - Sending keys Project description input text field
+2023-04-03 19:07:03 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:07:03 INFO - Click Create project submit button button
+2023-04-03 19:07:03 INFO - Find element with locator By.XPath: //span[normalize-space()='Create project']
+2023-04-03 19:07:03 INFO - Click Project settings button button
+2023-04-03 19:07:03 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:07:04 INFO - Get value from Project name input text field
+2023-04-03 19:07:04 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:07:05 INFO - Get value from Project code input text field
+2023-04-03 19:07:05 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:07:05 INFO - Get value from Project description input text field
+2023-04-03 19:07:05 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:07:05 INFO - Click Defects button button
+2023-04-03 19:07:05 INFO - Find element with locator By.CssSelector: a[title='Defects'] span[class='nbWgel']
+2023-04-03 19:07:06 INFO - Click Create New Defect button
+2023-04-03 19:07:06 INFO - Find element with locator By.CssSelector: .btn.btn-primary
+2023-04-03 19:07:06 INFO - Clear Defect Title Input text field
+2023-04-03 19:07:06 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:07:07 INFO - Sending keys Defect Title Input text field
+2023-04-03 19:07:07 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:07:07 INFO - Clear Defect Description Input text field
+2023-04-03 19:07:07 INFO - Find element with locator By.CssSelector: .ProseMirror.toastui-editor-contents
+2023-04-03 19:07:07 INFO - Sending keys Defect Description Input text field
+2023-04-03 19:07:07 INFO - Find element with locator By.CssSelector: .ProseMirror.toastui-editor-contents
+2023-04-03 19:07:07 INFO - Click Create defect button
+2023-04-03 19:07:07 INFO - Find element with locator By.CssSelector: button[type='submit']
+2023-04-03 19:07:07 INFO - Find element with locator By.CssSelector: [role='alert']
+2023-04-03 19:07:08 INFO - Find element with locator By.CssSelector: [role='alert']
+2023-04-03 19:07:08 INFO - Click Project settings button button
+2023-04-03 19:07:08 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:07:13 INFO - Click Delete project button button
+2023-04-03 19:07:13 INFO - Find element with locator By.XPath: //span[normalize-space()='Delete project']
+2023-04-03 19:07:13 INFO - Click Confirm delete project button button
+2023-04-03 19:07:13 INFO - Find element with locator By.XPath: //button[@type='button']//span[@class='UdZcu9'][normalize-space()='Delete project']
+2023-04-03 19:07:14 DEBUG - initialize Chrome Window
+2023-04-03 19:07:15 INFO - Maximize Window
+2023-04-03 19:07:22 INFO - Click Login button button
+2023-04-03 19:07:22 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:07:23 INFO - Clear Email field text field
+2023-04-03 19:07:23 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:24 INFO - Sending keys Email field text field
+2023-04-03 19:07:24 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:24 INFO - Clear Password field text field
+2023-04-03 19:07:24 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:24 INFO - Sending keys Password field text field
+2023-04-03 19:07:24 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:24 INFO - Click Login button button
+2023-04-03 19:07:24 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:07:28 DEBUG - initialize Chrome Window
+2023-04-03 19:07:30 INFO - Maximize Window
+2023-04-03 19:07:36 INFO - Click Login button button
+2023-04-03 19:07:36 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:07:38 INFO - Clear Email field text field
+2023-04-03 19:07:38 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:38 INFO - Sending keys Email field text field
+2023-04-03 19:07:38 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:38 INFO - Clear Password field text field
+2023-04-03 19:07:38 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:38 INFO - Sending keys Password field text field
+2023-04-03 19:07:38 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:38 INFO - Click Login button button
+2023-04-03 19:07:38 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:07:39 INFO - Find element with locator By.CssSelector: .form-control-feedback
+2023-04-03 19:07:39 INFO - Take text from Error message text field
+2023-04-03 19:07:39 INFO - Find element with locator By.CssSelector: .form-control-feedback
+2023-04-03 19:07:40 DEBUG - initialize Chrome Window
+2023-04-03 19:07:41 INFO - Maximize Window
+2023-04-03 19:07:49 INFO - Click Login button button
+2023-04-03 19:07:49 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:07:50 INFO - Clear Email field text field
+2023-04-03 19:07:50 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:50 INFO - Sending keys Email field text field
+2023-04-03 19:07:50 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:07:50 INFO - Clear Password field text field
+2023-04-03 19:07:50 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:51 INFO - Sending keys Password field text field
+2023-04-03 19:07:51 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:07:51 INFO - Click Login button button
+2023-04-03 19:07:51 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:07:54 INFO - Click Create project button button
+2023-04-03 19:07:54 INFO - Find element with locator By.CssSelector: #createButton
+2023-04-03 19:07:54 INFO - Clear Project name input text field
+2023-04-03 19:07:54 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:07:54 INFO - Sending keys Project name input text field
+2023-04-03 19:07:54 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:07:54 INFO - Clear Project code input text field
+2023-04-03 19:07:54 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:07:55 INFO - Sending keys Project code input text field
+2023-04-03 19:07:55 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:07:55 INFO - Clear Project description input text field
+2023-04-03 19:07:55 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:07:55 INFO - Sending keys Project description input text field
+2023-04-03 19:07:55 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:07:55 INFO - Click Create project submit button button
+2023-04-03 19:07:55 INFO - Find element with locator By.XPath: //span[normalize-space()='Create project']
+2023-04-03 19:07:55 INFO - Click Project settings button button
+2023-04-03 19:07:55 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:07:56 INFO - Get value from Project name input text field
+2023-04-03 19:07:56 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:07:57 INFO - Get value from Project code input text field
+2023-04-03 19:07:57 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:07:57 INFO - Get value from Project description input text field
+2023-04-03 19:07:57 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:07:57 INFO - Click Repository button button
+2023-04-03 19:07:57 INFO - Find element with locator By.CssSelector: a[title='Repository']
+2023-04-03 19:07:57 INFO - Click Create test case button button
+2023-04-03 19:07:57 INFO - Find element with locator By.CssSelector: #create-case-button
+2023-04-03 19:07:58 INFO - Clear Title input text field
+2023-04-03 19:07:58 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:07:59 INFO - Sending keys Title input text field
+2023-04-03 19:07:59 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:08:00 INFO - Clear Description input text field
+2023-04-03 19:08:00 INFO - Find element with locator By.CssSelector: div[class='col-12 form-group'] div[class='ProseMirror toastui-editor-contents']
+2023-04-03 19:08:00 INFO - Sending keys Description input text field
+2023-04-03 19:08:00 INFO - Find element with locator By.CssSelector: div[class='col-12 form-group'] div[class='ProseMirror toastui-editor-contents']
+2023-04-03 19:08:00 INFO - Clear Preconditions input text field
+2023-04-03 19:08:00 INFO - Find element with locator By.XPath: (//div[@class='ProseMirror toastui-editor-contents'])[2]
+2023-04-03 19:08:00 INFO - Sending keys Preconditions input text field
+2023-04-03 19:08:00 INFO - Find element with locator By.XPath: (//div[@class='ProseMirror toastui-editor-contents'])[2]
+2023-04-03 19:08:00 INFO - Clear Postconditions input text field
+2023-04-03 19:08:00 INFO - Find element with locator By.XPath: (//div[@contenteditable='true'])[6]
+2023-04-03 19:08:01 INFO - Sending keys Postconditions input text field
+2023-04-03 19:08:01 INFO - Find element with locator By.XPath: (//div[@contenteditable='true'])[6]
+2023-04-03 19:08:01 INFO - Click Save test case button button
+2023-04-03 19:08:01 INFO - Find element with locator By.CssSelector: button[id='save-case'] span[class='UdZcu9']
+2023-04-03 19:08:01 INFO - Take text from Info field text field
+2023-04-03 19:08:01 INFO - Find element with locator By.CssSelector: .zttQ3P
+2023-04-03 19:08:02 INFO - Click Test Plan button
+2023-04-03 19:08:02 INFO - Find element with locator By.CssSelector: a[title='Test Plans']
+2023-04-03 19:08:03 INFO - Click Create Plan button
+2023-04-03 19:08:03 INFO - Find element with locator By.XPath: //div[@class='k7tMJI']//a[@id='createButton']
+2023-04-03 19:08:03 INFO - Clear Title Input text field
+2023-04-03 19:08:03 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:08:03 INFO - Sending keys Title Input text field
+2023-04-03 19:08:03 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:08:03 INFO - Clear Description Input text field
+2023-04-03 19:08:03 INFO - Find element with locator By.CssSelector: .ProseMirror.toastui-editor-contents
+2023-04-03 19:08:03 INFO - Sending keys Description Input text field
+2023-04-03 19:08:03 INFO - Find element with locator By.CssSelector: .ProseMirror.toastui-editor-contents
+2023-04-03 19:08:04 INFO - Click Add cases button button
+2023-04-03 19:08:04 INFO - Find element with locator By.CssSelector: #edit-plan-add-cases-button
+2023-04-03 19:08:04 INFO - Click Created test case button button
+2023-04-03 19:08:04 INFO - Find element with locator By.CssSelector: div[id='suite-0'] p[class='suite-title']
+2023-04-03 19:08:04 INFO - Click Created test case button button
+2023-04-03 19:08:04 INFO - Find element with locator By.CssSelector: div[id='suitecase-1-checkbox'] span[class='custom-control-indicator']
+2023-04-03 19:08:04 INFO - Click Done button button
+2023-04-03 19:08:04 INFO - Find element with locator By.CssSelector: button[class='LzLtDS tscvgR MBIQEc'] span[class='UdZcu9']
+2023-04-03 19:08:04 INFO - Click Submit Plan button
+2023-04-03 19:08:04 INFO - Find element with locator By.CssSelector: #save-plan
+2023-04-03 19:08:07 INFO - Find element with locator By.CssSelector: [role='alert']
+2023-04-03 19:08:07 INFO - Find element with locator By.CssSelector: [role='alert']
+2023-04-03 19:08:07 INFO - Click Project settings button button
+2023-04-03 19:08:07 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:08:10 INFO - Click Delete project button button
+2023-04-03 19:08:10 INFO - Find element with locator By.XPath: //span[normalize-space()='Delete project']
+2023-04-03 19:08:10 INFO - Click Confirm delete project button button
+2023-04-03 19:08:10 INFO - Find element with locator By.XPath: //button[@type='button']//span[@class='UdZcu9'][normalize-space()='Delete project']
+2023-04-03 19:08:10 DEBUG - initialize Chrome Window
+2023-04-03 19:08:12 INFO - Maximize Window
+2023-04-03 19:08:19 INFO - Click Login button button
+2023-04-03 19:08:19 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:08:21 INFO - Clear Email field text field
+2023-04-03 19:08:21 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:08:21 INFO - Sending keys Email field text field
+2023-04-03 19:08:21 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:08:21 INFO - Clear Password field text field
+2023-04-03 19:08:21 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:08:21 INFO - Sending keys Password field text field
+2023-04-03 19:08:21 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:08:21 INFO - Click Login button button
+2023-04-03 19:08:21 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:08:25 INFO - Click Create project button button
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #createButton
+2023-04-03 19:08:25 INFO - Clear Project name input text field
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:25 INFO - Sending keys Project name input text field
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:25 INFO - Clear Project code input text field
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:25 INFO - Sending keys Project code input text field
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:25 INFO - Clear Project description input text field
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:25 INFO - Sending keys Project description input text field
+2023-04-03 19:08:25 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:25 INFO - Click Create project submit button button
+2023-04-03 19:08:25 INFO - Find element with locator By.XPath: //span[normalize-space()='Create project']
+2023-04-03 19:08:26 INFO - Click Project settings button button
+2023-04-03 19:08:26 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:08:27 INFO - Get value from Project name input text field
+2023-04-03 19:08:27 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:28 INFO - Get value from Project code input text field
+2023-04-03 19:08:28 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:28 INFO - Get value from Project description input text field
+2023-04-03 19:08:28 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:28 INFO - Clear Project name input text field
+2023-04-03 19:08:28 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:28 INFO - Sending keys Project name input text field
+2023-04-03 19:08:28 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:28 INFO - Clear Project code input text field
+2023-04-03 19:08:28 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:29 INFO - Sending keys Project code input text field
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:29 INFO - Clear Project description input text field
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:29 INFO - Sending keys Project description input text field
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:29 INFO - Click Update project settings button button
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: button[type='submit'] span[class='UdZcu9']
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: [role='alert']
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: [role='alert']
+2023-04-03 19:08:29 INFO - Click Project settings button button
+2023-04-03 19:08:29 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:08:29 INFO - Get value from Project name input text field
+2023-04-03 19:08:29 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:30 INFO - Get value from Project code input text field
+2023-04-03 19:08:30 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:30 INFO - Get value from Project description input text field
+2023-04-03 19:08:30 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:35 INFO - Click Delete project button button
+2023-04-03 19:08:35 INFO - Find element with locator By.XPath: //span[normalize-space()='Delete project']
+2023-04-03 19:08:35 INFO - Click Confirm delete project button button
+2023-04-03 19:08:35 INFO - Find element with locator By.XPath: //button[@type='button']//span[@class='UdZcu9'][normalize-space()='Delete project']
+2023-04-03 19:08:36 DEBUG - initialize Chrome Window
+2023-04-03 19:08:37 INFO - Maximize Window
+2023-04-03 19:08:45 INFO - Click Login button button
+2023-04-03 19:08:45 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:08:46 INFO - Clear Email field text field
+2023-04-03 19:08:46 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:08:47 INFO - Sending keys Email field text field
+2023-04-03 19:08:47 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:08:47 INFO - Clear Password field text field
+2023-04-03 19:08:47 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:08:47 INFO - Sending keys Password field text field
+2023-04-03 19:08:47 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:08:47 INFO - Click Login button button
+2023-04-03 19:08:47 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:08:50 INFO - Click Create project button button
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #createButton
+2023-04-03 19:08:50 INFO - Clear Project name input text field
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:50 INFO - Sending keys Project name input text field
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:50 INFO - Clear Project code input text field
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:50 INFO - Sending keys Project code input text field
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:50 INFO - Clear Project description input text field
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:50 INFO - Sending keys Project description input text field
+2023-04-03 19:08:50 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:50 INFO - Click Create project submit button button
+2023-04-03 19:08:50 INFO - Find element with locator By.XPath: //span[normalize-space()='Create project']
+2023-04-03 19:08:50 INFO - Click Project settings button button
+2023-04-03 19:08:50 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:08:51 INFO - Get value from Project name input text field
+2023-04-03 19:08:51 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:08:52 INFO - Get value from Project code input text field
+2023-04-03 19:08:52 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:08:52 INFO - Get value from Project description input text field
+2023-04-03 19:08:52 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:08:52 INFO - Click Repository button button
+2023-04-03 19:08:52 INFO - Find element with locator By.CssSelector: a[title='Repository']
+2023-04-03 19:08:52 INFO - Click Create test case button button
+2023-04-03 19:08:52 INFO - Find element with locator By.CssSelector: #create-case-button
+2023-04-03 19:08:53 INFO - Clear Title input text field
+2023-04-03 19:08:53 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:08:55 INFO - Sending keys Title input text field
+2023-04-03 19:08:55 INFO - Find element with locator By.CssSelector: #title
+2023-04-03 19:08:55 INFO - Clear Description input text field
+2023-04-03 19:08:55 INFO - Find element with locator By.CssSelector: div[class='col-12 form-group'] div[class='ProseMirror toastui-editor-contents']
+2023-04-03 19:08:55 INFO - Sending keys Description input text field
+2023-04-03 19:08:55 INFO - Find element with locator By.CssSelector: div[class='col-12 form-group'] div[class='ProseMirror toastui-editor-contents']
+2023-04-03 19:08:55 INFO - Clear Preconditions input text field
+2023-04-03 19:08:55 INFO - Find element with locator By.XPath: (//div[@class='ProseMirror toastui-editor-contents'])[2]
+2023-04-03 19:08:55 INFO - Sending keys Preconditions input text field
+2023-04-03 19:08:55 INFO - Find element with locator By.XPath: (//div[@class='ProseMirror toastui-editor-contents'])[2]
+2023-04-03 19:08:56 INFO - Clear Postconditions input text field
+2023-04-03 19:08:56 INFO - Find element with locator By.XPath: (//div[@contenteditable='true'])[6]
+2023-04-03 19:08:56 INFO - Sending keys Postconditions input text field
+2023-04-03 19:08:56 INFO - Find element with locator By.XPath: (//div[@contenteditable='true'])[6]
+2023-04-03 19:08:56 INFO - Click Save test case button button
+2023-04-03 19:08:56 INFO - Find element with locator By.CssSelector: button[id='save-case'] span[class='UdZcu9']
+2023-04-03 19:08:56 INFO - Take text from Info field text field
+2023-04-03 19:08:56 INFO - Find element with locator By.CssSelector: .zttQ3P
+2023-04-03 19:08:58 INFO - Click Project settings button button
+2023-04-03 19:08:58 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:09:02 INFO - Click Delete project button button
+2023-04-03 19:09:02 INFO - Find element with locator By.XPath: //span[normalize-space()='Delete project']
+2023-04-03 19:09:02 INFO - Click Confirm delete project button button
+2023-04-03 19:09:02 INFO - Find element with locator By.XPath: //button[@type='button']//span[@class='UdZcu9'][normalize-space()='Delete project']
+2023-04-03 19:09:02 DEBUG - initialize Chrome Window
+2023-04-03 19:09:04 INFO - Maximize Window
+2023-04-03 19:09:10 INFO - Click Login button button
+2023-04-03 19:09:10 INFO - Find element with locator By.CssSelector: #signin
+2023-04-03 19:09:12 INFO - Clear Email field text field
+2023-04-03 19:09:12 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:09:12 INFO - Sending keys Email field text field
+2023-04-03 19:09:12 INFO - Find element with locator By.CssSelector: #inputEmail
+2023-04-03 19:09:12 INFO - Clear Password field text field
+2023-04-03 19:09:12 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:09:12 INFO - Sending keys Password field text field
+2023-04-03 19:09:12 INFO - Find element with locator By.CssSelector: #inputPassword
+2023-04-03 19:09:12 INFO - Click Login button button
+2023-04-03 19:09:12 INFO - Find element with locator By.CssSelector: #btnLogin
+2023-04-03 19:09:16 INFO - Click Create project button button
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #createButton
+2023-04-03 19:09:16 INFO - Clear Project name input text field
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:09:16 INFO - Sending keys Project name input text field
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:09:16 INFO - Clear Project code input text field
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:09:16 INFO - Sending keys Project code input text field
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:09:16 INFO - Clear Project description input text field
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:09:16 INFO - Sending keys Project description input text field
+2023-04-03 19:09:16 INFO - Find element with locator By.CssSelector: #description-area
+2023-04-03 19:09:16 INFO - Click Create project submit button button
+2023-04-03 19:09:16 INFO - Find element with locator By.XPath: //span[normalize-space()='Create project']
+2023-04-03 19:09:17 INFO - Click Project settings button button
+2023-04-03 19:09:17 INFO - Find element with locator By.XPath: //span[normalize-space()='Settings']
+2023-04-03 19:09:18 INFO - Get value from Project name input text field
+2023-04-03 19:09:18 INFO - Find element with locator By.CssSelector: #project-name
+2023-04-03 19:09:19 INFO - Get value from Project code input text field
+2023-04-03 19:09:19 INFO - Find element with locator By.CssSelector: #project-code
+2023-04-03 19:09:19 INFO - Get value from Project description input text field
+2023-04-03 19:09:19 INFO - Find element with locator By.CssSelector: #description-area
