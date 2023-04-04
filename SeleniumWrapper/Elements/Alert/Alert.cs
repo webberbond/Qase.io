@@ -1,4 +1,6 @@
-﻿namespace SeleniumWrapper.Elements.Alert;
+﻿using SeleniumExtras.WaitHelpers;
+
+namespace SeleniumWrapper.Elements.Alert;
 
 public class Alert : BaseElement, IAlert
 {
@@ -8,11 +10,19 @@ public class Alert : BaseElement, IAlert
 
     public void WaitToDissappear(Alert alert)
     {
-        Wait.Until(_ => FindElement().Displayed == false);
+        Logger.Instance.Info("Waiting to disappear");
+        Wait.Until(_ => !IsDisplayed());
     }
 
     public string AlertText()
     {
+        Logger.Instance.Info("Get alert text");
         return FindElement().Text;
+    }
+    
+    public void WaitUntilCloses()
+    {
+        Logger.Instance.Info($"Wait until alert closes");
+        Wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.CssSelector("[role='alert']")));
     }
 }

@@ -16,7 +16,7 @@ public abstract class AppConfiguration
 
     public static readonly string? BaseUrl = Configurator.GetConfiguration().GetSection(UrlKey).Value;
 
-    public static BrowserProfile? BrowserProfile
+    public static BrowserProfile BrowserProfile
     {
         get
         {

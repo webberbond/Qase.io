@@ -37,7 +37,8 @@ public class ProjectsTest : BaseTest
             .UpdateProject(_testProjectModelToUpdate)
             .ValidateProjectWasUpdated()
             .ValidateDetails(_testProjectModelToUpdate)
-            .DeleteProject();
+            .DeleteProject()
+            .ValidateProjectsPageIsOpened();
         
         ScreenShotter.TakeScreenshot();
     }

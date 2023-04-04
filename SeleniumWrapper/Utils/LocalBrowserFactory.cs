@@ -13,7 +13,7 @@ public class LocalBrowserFactory : BrowserFactory
     {
         get
         {
-            var browserName = BrowserProfile.BrowserName;
+            var browserName = BrowserProfile!.BrowserName;
             var driverSettingsOptions = BrowserProfile.BrowserSettings;
             var driverSettings = new ChromeOptions();
             driverSettings.AddArguments(driverSettingsOptions);

@@ -7,7 +7,7 @@ public static class BrowserService
     private static readonly ThreadLocal<BrowserFactory?> BrowserFactoryContainer = new();
     public static BrowserProfile? BrowserProfile { get; private set; }
 
-    public static Browser? Browser => (Browser) GetBrowser()!;
+    public static Browser Browser => (Browser) GetBrowser()!;
     
     private static BrowserFactory? BrowserFactory
     {

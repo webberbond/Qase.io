@@ -76,14 +76,11 @@ public class PlansPage : BasePage
 
         return this;
     }
-
-    public static bool AlertDisplayed()
+    
+    public static bool ValidateTestPlanWasCreated(string planTitle)
     {
-        return PlansPageComponents.Alert.IsDisplayed();
-    }
+        var contains = PlansPageComponents.TestPlanTitle.GetText().Contains(planTitle);
 
-    public static string AlertMessage()
-    {
-        return PlansPageComponents.Alert.AlertText();
+        return contains;
     }
 }

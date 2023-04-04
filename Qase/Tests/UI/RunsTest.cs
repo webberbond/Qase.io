@@ -55,9 +55,10 @@ public class RunsTest : BaseTest
             .ValidateTestRunWasCompleted();
         
         ScreenShotter.TakeScreenshot();
-        
+
         ProjectsPageSteps
             .OpenSettingsPage()
-            .DeleteProject();
+            .DeleteProject()
+            .ValidateProjectsPageIsOpened();
     }
 }

@@ -1,5 +1,4 @@
-﻿using FluentAssertions;
-using NUnit.Allure.Attributes;
+﻿using NUnit.Allure.Attributes;
 using Qase.Entities.Models;
 using Qase.Pages.QasePages;
 using SeleniumWrapper.Utils;
@@ -69,11 +68,9 @@ public class PlansPageSteps : BaseStep
     }
 
     [AllureStep("Validate Test Plan Was Created Successfully")]
-    public PlansPageSteps ValidatePlanWasCreated()
+    public PlansPageSteps ValidatePlanWasCreated(TestPlanModel testPlan)
     {
-        Thread.Sleep(3000);
-        PlansPage.AlertDisplayed().Should().BeTrue();
-        PlansPage.AlertMessage().Should().Be("Test plan was created successfully!");
+        PlansPage.ValidateTestPlanWasCreated(testPlan.PlanTitle);
 
         return this;
     }

@@ -50,12 +50,13 @@ public class PlansTest : BaseTest
             .InputData(_testPlanModel)
             .AddTestCases()
             .CreatePlan()
-            .ValidatePlanWasCreated();
+            .ValidatePlanWasCreated(_testPlanModel);
         
         ScreenShotter.TakeScreenshot();
         
         ProjectsPageSteps
             .OpenSettingsPage()
-            .DeleteProject();
+            .DeleteProject()
+            .ValidateProjectsPageIsOpened();
     }
 }

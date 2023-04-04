@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using Qase.Components;
-using SeleniumExtras.WaitHelpers;
 using SeleniumWrapper.Utils;
 
 namespace Qase.Pages.QasePages;
@@ -45,7 +44,7 @@ public class ProjectSettingsPage : BasePage
 
     public ProjectSettingsPage WaitUntilAlertCloses()
     {
-         Wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.CssSelector("[role='alert']")));
+         ProjectsPageComponents.Alert.WaitUntilCloses();
          
          return this;
     }

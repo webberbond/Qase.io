@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWrapper.Elements.Alert;
 using SeleniumWrapper.Elements.Button;
 using SeleniumWrapper.Elements.TextField;
 
@@ -7,7 +6,7 @@ namespace Qase.Components;
 
 public class PlansPageComponents
 {
-    public readonly Alert Alert = new(By.CssSelector("[role='alert']"), "Alert message");
+    public readonly TextField TestPlanTitle = new(By.XPath("//a[@class='defect-title']"), "Test Plan Title");
     
     public readonly Button TestPlanButton = new(By.CssSelector("a[title='Test Plans']"), "Test Plan");
     

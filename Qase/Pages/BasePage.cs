@@ -12,15 +12,16 @@ public abstract class BasePage : BaseForm
 {
     protected static readonly string? BaseUrl = AppConfiguration.BaseUrl;
 
-    protected readonly WebDriverWait Wait = new(WebDriver, TimeSpan.FromSeconds(15));
+    private readonly WebDriverWait _wait = new(WebDriver, TimeSpan.FromSeconds(15));
 
     protected BasePage(Browser browser) : base(browser)
     {
         Browser = browser;
     }
 
-    protected new Browser Browser { get; }
-    private static WebDriver WebDriver => BrowserService.Browser!.WebDriver;
+    protected Browser Browser { get; }
+    
+    private static WebDriver WebDriver => BrowserService.Browser.WebDriver;
 
     protected abstract override By UniqueWebLocator { get; }
 
@@ -28,7 +29,7 @@ public abstract class BasePage : BaseForm
     {
         try
         {
-            Wait.Until(ExpectedConditions.ElementIsVisible(UniqueWebLocator));
+            _wait.Until(ExpectedConditions.ElementIsVisible(UniqueWebLocator));
             return true;
         }
         catch (TimeoutException)

@@ -22,7 +22,7 @@ public class ProjectsPageSteps : BaseStep
 
         return this;
     }
-
+    
     [AllureStep("Create New Project")]
     public ProjectsPageSteps CreateNewProject()
     {

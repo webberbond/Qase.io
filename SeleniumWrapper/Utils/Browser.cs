@@ -5,8 +5,7 @@ public class Browser : IBrowser
     public Browser(WebDriver webDriver)
     {
         WebDriver = webDriver;
-        BrowserWait =
-            new WebDriverWait(WebDriver, TimeSpan.FromSeconds(BrowserService.BrowserProfile.ConditionTimeWait));
+        BrowserWait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(BrowserService.BrowserProfile!.ConditionTimeWait));
         MaximizeWindow();
     }
 

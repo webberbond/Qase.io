@@ -14,7 +14,7 @@ public class MainPage : BasePage
 
     protected override By UniqueWebLocator => By.CssSelector(".cover-new.text-left.pt-5.max-w-6xl");
     
-    private MainPageComponents MainPageComponents => new();
+    private static MainPageComponents MainPageComponents => new();
 
     public MainPage OpenPage()
     {

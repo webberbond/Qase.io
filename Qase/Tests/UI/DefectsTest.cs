@@ -47,6 +47,7 @@ public class DefectsTest : BaseTest
         
         ProjectsPageSteps
             .OpenSettingsPage()
-            .DeleteProject();
+            .DeleteProject()
+            .ValidateProjectsPageIsOpened();
     }
 }

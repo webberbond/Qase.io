@@ -1,6 +1,14 @@
 ﻿namespace SeleniumWrapper.Elements.Button;
 
-public interface IButton
+public class Button : BaseElement, IButton
 {
-    void Click();
+    public Button(By locator, string name) : base(locator, name)
+    {
+    }
+
+    public void Click()
+    {
+        Logger.Instance.Info($"Click {Name} button");
+        FindElement().Click();
+    }
 }

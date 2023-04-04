@@ -1,5 +1,4 @@
 ﻿using Allure.Net.Commons;
-using NUnit.Framework.Interfaces;
 using Qase.Tests;
 
 namespace Qase.Utilities;

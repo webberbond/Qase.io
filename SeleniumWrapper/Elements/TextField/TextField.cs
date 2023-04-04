@@ -16,14 +16,21 @@ public class TextField : BaseElement, ITextField
     {
         Logger.Instance.Info($"Clear {Name} text field");
         ClearField();
+        WaitUntilFieldIsEmpty();
 
         Logger.Instance.Info($"Sending keys {Name} text field");
         FindElement().SendKeys(text);
     }
-
+    
     public string GetValue()
     {
         Logger.Instance.Info($"Get value from {Name} text field");
         return FindElement().GetAttribute("value");
+    }
+
+    private void WaitUntilFieldIsEmpty()
+    { 
+        Logger.Instance.Info($"Wait until {Name} text field is empty");
+        Wait.Until(_ => string.IsNullOrEmpty(GetValue()));
     }
 }

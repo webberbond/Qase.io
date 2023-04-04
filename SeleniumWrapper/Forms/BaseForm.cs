@@ -9,19 +9,14 @@ public abstract class BaseForm
         Browser = browser;
     }
 
-    protected Browser Browser { get; }
+    private Browser Browser { get; }
 
     protected abstract By UniqueWebLocator { get; }
 
 
-    protected BaseElement UniqueElement => new Label(UniqueWebLocator, "Unique Element ");
+    private BaseElement UniqueElement => new Label(UniqueWebLocator, "Unique Element ");
 
     public bool IsPageOpened => UniqueElement.IsDisplayed();
-
-    private bool IsDisplayed()
-    {
-        return UniqueElement.IsDisplayed();
-    }
 
     public void WaitForPageOpened()
     {

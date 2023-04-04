@@ -15,6 +15,8 @@ public abstract class BaseElement
     protected string Name { get; }
 
     private static WebDriver WebDriver => BrowserService.Browser.WebDriver;
+    
+    protected IJavaScriptExecutor JavaScriptExecutor => WebDriver;
 
     public bool IsDisplayed()
     {

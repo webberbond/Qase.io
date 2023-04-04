@@ -46,6 +46,7 @@ public class RepositoryTest : BaseTest
         
         ProjectsPageSteps
             .OpenSettingsPage()
-            .DeleteProject();
+            .DeleteProject()
+            .ValidateProjectsPageIsOpened();
     }
 }
