@@ -16,6 +16,7 @@ jobs:
       - run:
           name: 'Build Stage'
           command: |
+            echo dotnet version: $(dotnet --version) 
             dotnet build
       - run:
           name: 'Test Stage'
