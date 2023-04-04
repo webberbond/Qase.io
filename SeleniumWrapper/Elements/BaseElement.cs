@@ -2,7 +2,7 @@
 
 public abstract class BaseElement
 {
-    protected readonly WebDriverWait Wait = new(WebDriver, TimeSpan.FromSeconds(10));
+    protected readonly WebDriverWait Wait = new(WebDriver, TimeSpan.FromSeconds(15));
 
     protected BaseElement(By locator, string name)
     {
@@ -15,8 +15,6 @@ public abstract class BaseElement
     protected string Name { get; }
 
     private static WebDriver WebDriver => BrowserService.Browser.WebDriver;
-    
-    protected IJavaScriptExecutor JavaScriptExecutor => WebDriver;
 
     public bool IsDisplayed()
     {
