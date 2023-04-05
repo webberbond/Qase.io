@@ -15,6 +15,7 @@ public class DefectsTest : BaseTest
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Defects Test With Validations")]
+    [AllureLink("Create Defect","https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1673022051")]
     public void CreateDefect()
     {
         MainPageSteps

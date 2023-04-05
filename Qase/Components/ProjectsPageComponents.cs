@@ -19,11 +19,11 @@ public class ProjectsPageComponents
 
     public readonly Button CreateProjectSubmitButton = new(By.XPath("//span[normalize-space()='Create project']"), "Create project submit button");
    
-    public readonly Button ConfirmDeleteProjectButton = new(By.XPath("//button[@type='button']//span[@class='UdZcu9'][normalize-space()='Delete project']"), "Confirm delete project button");
+    public readonly Button ConfirmDeleteProjectButton = new(By.XPath("//button[@type='button']//span[@class='ZwgkIF'][normalize-space()='Delete project']"), "Confirm delete project button");
     
     public readonly Button ProjectSettingsButton = new(By.XPath("//span[normalize-space()='Settings']"), "Project settings button");
     
-    public readonly Button UpdateProjectSettingsButton = new(By.CssSelector("button[type='submit'] span[class='UdZcu9']"), "Update project settings button");
+    public readonly Button UpdateProjectSettingsButton = new(By.XPath("//span[normalize-space()='Update settings']"), "Update project settings button");
 
     public readonly Button DeleteProjectButton = new(By.XPath("//span[normalize-space()='Delete project']"), "Delete project button");
 }

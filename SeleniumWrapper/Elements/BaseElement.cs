@@ -1,4 +1,6 @@
-﻿namespace SeleniumWrapper.Elements;
+﻿using OpenQA.Selenium.Interactions;
+
+namespace SeleniumWrapper.Elements;
 
 public abstract class BaseElement
 {
@@ -15,6 +17,8 @@ public abstract class BaseElement
     protected string Name { get; }
 
     private static WebDriver WebDriver => BrowserService.Browser.WebDriver;
+    
+    protected readonly Actions Actions = new(WebDriver);
 
     public bool IsDisplayed()
     {

@@ -13,9 +13,9 @@ public class DefectsPageComponents
 
     public readonly Button CreateNewDefectButton = new(By.CssSelector(".btn.btn-primary"), "Create New Defect");
 
-    public readonly TextField DefectActualResultInput = new(By.CssSelector(".ProseMirror.toastui-editor-contents"), "Defect Description Input");
+    public readonly TextField DefectTitleInput = new(By.XPath("//input[@id='title']"), "Defect Title Input");
+    
+    public readonly TextField DefectActualResultInput = new(By.XPath("//input[@id='actual_result']"), "Defect Description Input");
 
-    public readonly Button DefectsButton = new(By.CssSelector("a[title='Defects'] span[class='nbWgel']"), "Defects button");
-
-    public readonly TextField DefectTitleInput = new(By.CssSelector("#title"), "Defect Title Input");
+    public readonly Button DefectsButton = new(By.CssSelector("a[title='Defects']"), "Defects button");
 }

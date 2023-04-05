@@ -10,6 +10,7 @@ public class LoginTest : BaseTest
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Login Test With Validations")]
+    [AllureLink("Successful Login","https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=0")]
     public void Authorization()
     {
         MainPageSteps
@@ -29,6 +30,7 @@ public class LoginTest : BaseTest
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Error Login Test With Validations")]
+    [AllureLink("Error Login", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=233756267")]
     public void AuthorizationError()
     {
         MainPageSteps

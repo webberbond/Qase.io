@@ -16,6 +16,7 @@ public class RunsTest : BaseTest
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Creation of New Test Run With Validations")]
+    [AllureLink("Create Test Run", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=856280847")]
     public void CreateTestRun()
     {
         MainPageSteps

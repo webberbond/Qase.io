@@ -9,8 +9,8 @@ public class RepositoryPage : BasePage
     public RepositoryPage(Browser browser) : base(browser)
     {
     }
-
-    protected override By UniqueWebLocator => By.XPath("//h1[@class='VqrSGU']");
+    
+    protected override By UniqueWebLocator => By.XPath("//h1[@class='fGDnu0']");
 
     private static TestCasePageComponents TestCasePageComponents => new();
 

@@ -16,14 +16,14 @@ public class LoginPage : BasePage
 
     public LoginPage InputEmail(string email)
     {
-        LoginPageComponents.EmailInputField.SendText(email);
+        LoginPageComponents.EmailInputField.SendTextWithClear(email);
 
         return this;
     }
 
     public LoginPage InputPassword(string password)
     {
-        LoginPageComponents.PasswordInputField.SendText(password);
+        LoginPageComponents.PasswordInputField.SendTextWithClear(password);
 
         return this;
     }

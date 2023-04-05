@@ -12,13 +12,13 @@ public class TestCasePageComponents
    
     public readonly TextField TitleInput = new(By.CssSelector("#title"), "Title input");
 
-    public readonly TextField DescriptionInput = new(By.CssSelector("div[class='col-12 form-group'] div[class='ProseMirror toastui-editor-contents']"), "Description input");
+    public readonly TextField DescriptionInput = new(By.XPath("//input[@id='0-description']"), "Description input");
 
-    public readonly TextField PreConditionsInput = new(By.XPath("(//div[@class='ProseMirror toastui-editor-contents'])[2]"), "Preconditions input");
+    public readonly TextField PreConditionsInput = new(By.XPath("//input[@id='0-preconditions']"), "Preconditions input");
     
-    public readonly TextField PostConditionsInput = new(By.XPath("(//div[@contenteditable='true'])[6]"), "Postconditions input");
+    public readonly TextField PostConditionsInput = new(By.XPath("//input[@id='0-postconditions']"), "Postconditions input");
 
-    public readonly Button SaveTestCaseButton = new(By.CssSelector("button[id='save-case'] span[class='UdZcu9']"), "Save test case button");
+    public readonly Button SaveTestCaseButton = new(By.CssSelector("button[id='save-case']"), "Save test case button");
 
-    public readonly TextField InfoField = new(By.CssSelector(".zttQ3P"), "Info field");
+    public readonly TextField InfoField = new(By.CssSelector(".o0Jd8j"), "Info field");
 }

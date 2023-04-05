@@ -15,6 +15,7 @@ public class RepositoryTest : BaseTest
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Creation of New Test Case With Validations")]
+    [AllureLink("Create Test Case", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1138196004")]
     public void CreateTestCase()
     {
         MainPageSteps

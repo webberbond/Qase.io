@@ -12,12 +12,18 @@ public class TextField : BaseElement, ITextField
         return FindElement().Text;
     }
 
-    public void SendText(string text)
+    public void SendTextWithClear(string text)
     {
         Logger.Instance.Info($"Clear {Name} text field");
         ClearField();
         WaitUntilFieldIsEmpty();
 
+        Logger.Instance.Info($"Sending keys {Name} text field");
+        FindElement().SendKeys(text);
+    }
+
+    public void SendText(string text)
+    {
         Logger.Instance.Info($"Sending keys {Name} text field");
         FindElement().SendKeys(text);
     }
@@ -32,5 +38,11 @@ public class TextField : BaseElement, ITextField
     { 
         Logger.Instance.Info($"Wait until {Name} text field is empty");
         Wait.Until(_ => string.IsNullOrEmpty(GetValue()));
+    }
+
+    public void SendTextWithActions(string text)
+    {
+        Logger.Instance.Info($"Sending keys {Name} text field");
+        Actions.Click().SendKeys(text).Build().Perform();
     }
 }

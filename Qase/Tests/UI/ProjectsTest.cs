@@ -15,6 +15,7 @@ public class ProjectsTest : BaseTest
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Projects Test With Validations")]
+    [AllureLink("Create Test Project", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=676356653")]
     public void TestProjectCreationUpdationDeletion()
     {
         MainPageSteps

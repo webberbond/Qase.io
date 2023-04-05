@@ -24,21 +24,21 @@ public class ProjectsPage : BasePage
 
     public ProjectsPage InputProjectName(string projectName)
     {
-        ProjectsPageComponents.ProjectNameInput.SendText(projectName);
+        ProjectsPageComponents.ProjectNameInput.SendTextWithClear(projectName);
 
         return this;
     }
 
     public ProjectsPage InputProjectCode(string projectCode)
     {
-        ProjectsPageComponents.ProjectCodeInput.SendText(projectCode);
+        ProjectsPageComponents.ProjectCodeInput.SendTextWithClear(projectCode);
 
         return this;
     }
 
     public ProjectsPage InputProjectDescription(string projectDescription)
     {
-        ProjectsPageComponents.ProjectDescriptionInput.SendText(projectDescription);
+        ProjectsPageComponents.ProjectDescriptionInput.SendTextWithClear(projectDescription);
 
         return this;
     }

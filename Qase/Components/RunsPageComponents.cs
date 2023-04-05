@@ -8,11 +8,11 @@ public class RunsPageComponents
 {
     public readonly Button TestRunsButton = new(By.CssSelector("a[title='Test Runs']"), "Create New Run Button");
     
-    public readonly Button StartNewTestRunButton = new(By.CssSelector(".UdZcu9"), "Create New Run Button");
+    public readonly Button StartNewTestRunButton = new(By.CssSelector("div[class='d-flex mt-3'] span[class='ZwgkIF']"), "Create New Run Button");
     
-    public readonly TextField TestRunDescriptionField = new(By.CssSelector(".ProseMirror.toastui-editor-contents"), "Test Run Description Field");
+    public readonly TextField TestRunDescriptionField = new(By.XPath("//input[@id='description']"), "Test Run Description Field");
     
-    public readonly Button AddTestsFromRepositoryButton = new(By.CssSelector("button[class='ZOc1sW']"), "Add Tests From Repository Button");
+    public readonly Button AddTestsFromRepositoryButton = new(By.XPath("//button[normalize-space()='Add/modify tests from repository']"), "Add Tests From Repository Button");
 
     public readonly Button TestCaseButton = new(By.CssSelector("div[id='suite-0'] p[class='suite-title']"), "Created test case button");
 
@@ -20,7 +20,7 @@ public class RunsPageComponents
    
     public readonly Button DoneButton = new(By.XPath("//span[normalize-space()='Done']"), "Done button");
     
-    public readonly Button StartRunButton = new(By.CssSelector("button[type='submit'] span[class='UdZcu9']"), "Start A Run Button");
+    public readonly Button StartRunButton = new(By.XPath("//span[normalize-space()='Start a run']"), "Start A Run Button");
     
     public readonly Button CompleteConfirmButton = new(By.XPath("//span[normalize-space()='Complete']"), "Complete Confirm Button");
 

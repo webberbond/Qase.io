@@ -16,21 +16,21 @@ public class ProjectSettingsPage : BasePage
     
     public ProjectSettingsPage UpdateProjectName(string updatedProjectName)
     {
-        ProjectsPageComponents.ProjectNameInput.SendText(updatedProjectName);
+        ProjectsPageComponents.ProjectNameInput.SendTextWithClear(updatedProjectName);
 
         return this;
     }
 
     public ProjectSettingsPage UpdateProjectCode(string updatedProjectCode)
     {
-        ProjectsPageComponents.ProjectCodeInput.SendText(updatedProjectCode);
+        ProjectsPageComponents.ProjectCodeInput.SendTextWithClear(updatedProjectCode);
 
         return this;
     }
 
     public ProjectSettingsPage UpdateProjectDescription(string updatedProjectDescription)
     {
-        ProjectsPageComponents.ProjectDescriptionInput.SendText(updatedProjectDescription);
+        ProjectsPageComponents.ProjectDescriptionInput.SendTextWithClear(updatedProjectDescription);
 
         return this;
     }
