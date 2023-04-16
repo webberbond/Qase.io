@@ -1,61 +1,75 @@
 ﻿using OpenQA.Selenium;
-using Qase.Components;
-using SeleniumWrapper.Utils;
+using SeleniumExtras.PageObjects;
 
 namespace Qase.Pages.QasePages;
 
 public class DefectsPage : BasePage
 {
-    public DefectsPage(Browser browser) : base(browser)
+    public DefectsPage(IWebDriver webDriver) : base(webDriver)
     {
+        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//h1[normalize-space()='Defects']");
+    protected override string UrlPath => string.Empty;
+    
+    [FindsBy(How = How.XPath, Using = "//a[@id='defect-1-title']")]
+    private IWebElement _defectTitle;
+    
+    [FindsBy(How = How.CssSelector, Using = "[role='alert']")]
+    private IWebElement _alert;
+    
+    [FindsBy(How = How.CssSelector, Using = "button[type='submit']")]
+    private IWebElement _createDefectButton;
 
-    private static DefectsPageComponents DefectsPageComponents => new();
+    [FindsBy(How = How.CssSelector, Using = ".btn.btn-primary")]
+    private IWebElement _createNewDefectButton;
+    
+    [FindsBy(How = How.XPath, Using = "//input[@id='title']")]
+    private IWebElement _defectTitleInputField;
+    
+    [FindsBy(How = How.XPath, Using = "//input[@id='actual_result']")]
+    private IWebElement _defectActualResultInputField;
+    
+    [FindsBy(How = How.CssSelector, Using = "a[title='Defects']")]
+    private IWebElement _defectsButton;
 
-    public DefectsPage OpenDefects()
+    public DefectsPage CreateNewDefect()
     {
-        DefectsPageComponents.DefectsButton.Click();
-
+        _defectsButton.Click();
+        _createNewDefectButton.Click();
+        
         return this;
     }
-
-    public DefectsPage NewDefectButtonClick()
-    {
-        DefectsPageComponents.CreateNewDefectButton.Click();
-
-        return this;
-    }
-
+    
     public DefectsPage InputDefectTitle(string defectTitle)
     {
-        DefectsPageComponents.DefectTitleInput.SendText(defectTitle);
-
+        _defectTitleInputField.SendKeys(defectTitle);
+        
         return this;
     }
-
+    
     public DefectsPage InputDefectActualResult(string defectActualResult)
     {
-        DefectsPageComponents.DefectActualResultInput.SendText(defectActualResult);
-
+        _defectActualResultInputField.SendKeys(defectActualResult);
+        
+        return this;
+    }
+    
+    public DefectsPage CreateDefect()
+    {
+        _createDefectButton.Click();
+        
         return this;
     }
 
-    public DefectsPage ClickCreateDefectButton()
+    public string GetAlertText()
     {
-        DefectsPageComponents.CreateDefectButton.Click();
-
-        return this;
+        return _alert.Text;
     }
-
-    public static bool AlertDisplayed()
+    
+    public string GetDefectTitle()
     {
-        return DefectsPageComponents.Alert.IsDisplayed();
+        return _defectTitle.Text;
     }
-
-    public static string AlertMessage()
-    {
-        return DefectsPageComponents.Alert.AlertText();
-    }
-}
+}   

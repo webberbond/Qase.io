@@ -1,53 +1,25 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
-using Qase.Entities.DataFaker;
 using Qase.Entities.Models;
-using Qase.Utilities;
+using Qase.Tests.Settings;
 
 namespace Qase.Tests.UI;
 
 [AllureNUnit]
-public class RepositoryTest : BaseTest
+public class RepositoryTest : RepositoryTestSettings
 {
-    private readonly TestCaseModel _testCaseModel = new TestCaseModelDataFaker().Generate();
-    private readonly TestProjectModel _testProjectModel = new TestProjectModelDataFaker().Generate();
-
     [Test]
+    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Creation of New Test Case With Validations")]
     [AllureLink("Create Test Case", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1138196004")]
-    public void CreateTestCase()
+    public void CreateNewTestCase()
     {
-        MainPageSteps
-            .OpenSite()
-            .ValidateIsMainPageOpened()
-            .ClickLoginButton()
-            .ValidateIsLoginPageOpened();
-
-        LoginSteps
-            .InputData(Email, Password)
-            .LoginButtonClick()
-            .ValidateIsProjectsPageOpened();
-
-        ProjectsPageSteps
-            .CreateNewProject()
-            .InputData(_testProjectModel)
-            .ClickSubmitButton()
-            .ValidateDetails(_testProjectModel);
-
         RepositoryPageSteps
-            .ClickRepositoryButton()
-            .ValidateIsRepositoryPageOpened()
             .CreateNewTestCase()
-            .InputData(_testCaseModel)
-            .SaveTestCase()
-            .ValidateTestCaseCreated();
+            .InputInformation(TestCaseModel)
+            .ClickSaveTestCaseButton();
         
-        ScreenShotter.TakeScreenshot();
-        
-        ProjectsPageSteps
-            .OpenSettingsPage()
-            .DeleteProject()
-            .ValidateProjectsPageIsOpened();
+        Assert.That(RepositoryPage.GetAlertText(), Is.EqualTo("Test case was created successfully!"), "Checking if alert text is correct after creating a test case.");
     }
 }

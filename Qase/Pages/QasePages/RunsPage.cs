@@ -1,96 +1,132 @@
 ﻿using OpenQA.Selenium;
-using Qase.Components;
-using SeleniumWrapper.Utils;
+using SeleniumExtras.PageObjects;
 
 namespace Qase.Pages.QasePages;
 
 public class RunsPage : BasePage
 {
-    public RunsPage(Browser browser) : base(browser)
+    public RunsPage(IWebDriver webDriver) : base(webDriver)
     {
+        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//h1[normalize-space()='Test runs']");
+    
+    protected override string UrlPath => string.Empty;
+    
+    [FindsBy(How = How.CssSelector, Using = "a[title='Test Runs']")]
+    private IWebElement _testRunsButton;
 
-    private static RunsPageComponents RunsPageComponents => new();
+    [FindsBy(How = How.CssSelector, Using = "div[class='d-flex mt-3'] span[class='ZwgkIF']")]
+    private IWebElement _startNewTestRunButton;
 
-    public RunsPage OpenRunsPage()
+    [FindsBy(How = How.XPath, Using = "//input[@id='description']")]
+    private IWebElement _testRunDescriptionField;
+    
+    [FindsBy(How = How.XPath, Using = "//button[normalize-space()='Add/modify tests from repository']")]
+    private IWebElement _addTestsFromRepositoryButton;
+    
+    [FindsBy(How = How.CssSelector, Using = "div[id='suite-0'] p[class='suite-title']")]
+    private IWebElement _testCaseButton;
+    
+    [FindsBy(How = How.CssSelector, Using = "div[id='suitecase-1-checkbox'] span[class='custom-control-indicator']")]
+    private IWebElement _testCaseCheckBox;
+    
+    [FindsBy(How = How.XPath, Using = "//span[normalize-space()='Done']")]
+    private IWebElement _doneButton;
+    
+    [FindsBy(How = How.XPath, Using = "//span[normalize-space()='Start a run']")]
+    private IWebElement _startRunButton;
+    
+    [FindsBy(How = How.XPath, Using = "//span[normalize-space()='Complete']")]
+    private IWebElement _completeConfirmButton;
+    
+    [FindsBy(How = How.CssSelector, Using = "#complete-run-button")]
+    private IWebElement _completeRunButton;
+    
+    [FindsBy(How = How.CssSelector, Using = "#share-report-button")]
+    private IWebElement _shareReportButton;
+    
+    [FindsBy(How = How.XPath, Using = "//button[normalize-space()='Run again']")]
+    private IWebElement _runAgainButton;
+    
+    public RunsPage OpenTestRunsPage()
     {
-        RunsPageComponents.TestRunsButton.Click();
+        _testRunsButton.Click();
 
         return this;
     }
-
-    public RunsPage StartNewRunButtonClick()
+    
+    public RunsPage StartNewTestRun()
     {
-        RunsPageComponents.StartNewTestRunButton.Click();
+        _startNewTestRunButton.Click();
 
         return this;
     }
-
-    public RunsPage InputDescription(string testRunDescription)
+    
+    public RunsPage InputTestRunDescription(string testRunDescription)
     {
-        RunsPageComponents.TestRunDescriptionField.SendText(testRunDescription);
+        _testRunDescriptionField.SendKeys(testRunDescription);
 
         return this;
     }
-
-    public RunsPage AddTestFromRepositoryButtonClick()
+    
+    public RunsPage AddTestsFromRepository()
     {
-        RunsPageComponents.AddTestsFromRepositoryButton.Click();
+        _addTestsFromRepositoryButton.Click();
 
         return this;
     }
 
     public RunsPage TestCaseButtonClick()
     {
-        RunsPageComponents.TestCaseButton.Click();
-
+        _testCaseButton.Click();
+        
         return this;
     }
-
-    public RunsPage TestCaseCheckboxButtonClick()
+    
+    public RunsPage TestCaseCheckBoxClick()
     {
-        RunsPageComponents.TestCaseCheckboxButton.Click();
-
+        _testCaseCheckBox.Click();
+        
         return this;
     }
-
+    
     public RunsPage DoneButtonClick()
     {
-        RunsPageComponents.DoneButton.Click();
-
+        _doneButton.Click();
+        
+        return this;
+    }
+    
+    public RunsPage StartRunButtonClick()
+    {
+        _startRunButton.Click();
+        
         return this;
     }
 
-    public RunsPage StartRun()
+    public bool IsShareReportButtonDisplayed()
     {
-        RunsPageComponents.StartRunButton.Click();
-
-        return this;
-    }
-
-    public static bool IsShareReportButtonDisplayed()
-    {
-        return RunsPageComponents.ShareReportButton.IsDisplayed();
+       return _shareReportButton.Displayed;
     }
 
     public RunsPage CompleteRunButtonClick()
     {
-        RunsPageComponents.CompleteRunButton.Click();
-
+        _completeRunButton.Click();
+        
+        return this;
+    }
+    
+    public RunsPage CompleteConfirmButtonClick()
+    {
+        _completeConfirmButton.Click();
+        
         return this;
     }
 
-    public RunsPage CompleteRunConfirmButtonClick()
+    public bool IsRunAgainButtonDisplayed()
     {
-        RunsPageComponents.CompleteConfirmButton.Click();
-
-        return this;
-    }
-
-    public static bool IsRunAgainButtonDisplayed()
-    {
-        return RunsPageComponents.RunAgainButton.IsDisplayed();
+        return _runAgainButton.Displayed;
     }
 }

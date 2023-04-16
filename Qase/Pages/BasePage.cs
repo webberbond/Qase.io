@@ -1,41 +1,48 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using Qase.Config;
+using Qase.Utilities;
 using SeleniumExtras.WaitHelpers;
-using SeleniumWrapper.Forms;
-using SeleniumWrapper.Helpers;
-using SeleniumWrapper.Utils;
 
 namespace Qase.Pages;
 
-public abstract class BasePage : BaseForm
+public abstract class BasePage
 {
-    protected static readonly string? BaseUrl = AppConfiguration.BaseUrl;
+    private IWebDriver WebDriver { get; }
 
-    private readonly WebDriverWait _wait = new(WebDriver, TimeSpan.FromSeconds(15));
-
-    protected BasePage(Browser browser) : base(browser)
+    protected BasePage(IWebDriver webDriver)
     {
-        Browser = browser;
+        WebDriver = webDriver;
     }
 
-    protected Browser Browser { get; }
+    private IWebElement UniqueWebElement => WebDriver.FindElement(UniqueWebLocator);
     
-    private static WebDriver WebDriver => BrowserService.Browser.WebDriver;
+    protected abstract By UniqueWebLocator { get; }
 
-    protected abstract override By UniqueWebLocator { get; }
+    private readonly string? _baseUrl = Configurator.BaseUrl;
+    
+    protected abstract string UrlPath { get; }
 
-    public new bool IsPageOpened()
+    public void OpenPage()
     {
-        try
+        var uri = new Uri(_baseUrl?.TrimEnd('/') + UrlPath, UriKind.Absolute);
+        WebDriver.Navigate().GoToUrl(uri);
+    }
+
+    public bool IsPageOpened
+    {
+        get
         {
-            _wait.Until(ExpectedConditions.ElementIsVisible(UniqueWebLocator));
-            return true;
-        }
-        catch (TimeoutException)
-        {
-            Logger.Instance.Info("Page was not opened");
-            return false;
+            bool isOpened;
+            try
+            {
+                isOpened = UniqueWebElement.Displayed;
+            }
+            catch (Exception)
+            {
+                isOpened = false;
+            }
+
+            return isOpened;
         }
     }
 }

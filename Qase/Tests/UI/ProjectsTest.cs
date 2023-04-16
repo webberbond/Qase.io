@@ -1,46 +1,30 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
-using Qase.Entities.DataFaker;
-using Qase.Entities.Models;
-using Qase.Utilities;
+using Qase.Tests.Settings;
 
 namespace Qase.Tests.UI;
 
 [AllureNUnit]
-public class ProjectsTest : BaseTest
+public class ProjectsTest : ProjectsTestSettings
 {
-    private readonly TestProjectModel _testProjectModel = new TestProjectModelDataFaker().Generate();
-    private readonly TestProjectModel _testProjectModelToUpdate = new TestProjectModelDataFaker().Generate();
-
     [Test]
+    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Projects Test With Validations")]
     [AllureLink("Create Test Project", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=676356653")]
-    public void TestProjectCreationUpdationDeletion()
+    public void TestProjectCreation()
     {
-        MainPageSteps
-            .OpenSite()
-            .ValidateIsMainPageOpened()
-            .ClickLoginButton()
-            .ValidateIsLoginPageOpened();
-
-        LoginSteps
-            .InputData(Email, Password)
-            .LoginButtonClick()
-            .ValidateIsProjectsPageOpened();
-
         ProjectsPageSteps
-            .ValidateProjectsPageIsOpened()
             .CreateNewProject()
-            .InputData(_testProjectModel)
+            .InputInformation(TestProjectModel)
             .ClickSubmitButton()
-            .ValidateDetails(_testProjectModel)
-            .UpdateProject(_testProjectModelToUpdate)
-            .ValidateProjectWasUpdated()
-            .ValidateDetails(_testProjectModelToUpdate)
-            .DeleteProject()
-            .ValidateProjectsPageIsOpened();
+            .OpenProjectSettings();
         
-        ScreenShotter.TakeScreenshot();
+        Assert.Multiple(() =>
+        {
+            Assert.That(ProjectsPage.GetProjectName(), Is.EqualTo(TestProjectModel.ProjectName), "Checking if actual project name is equal to generated.");
+            Assert.That(ProjectsPage.GetProjectCode(), Is.EqualTo(TestProjectModel.ProjectCode), "Checking if actual project code is equal to generated.");
+            Assert.That(ProjectsPage.GetProjectDescription(), Is.EqualTo(TestProjectModel.ProjectDescription), "Checking if actual project description is equal to generated.");
+        });
     }
 }

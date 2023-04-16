@@ -1,49 +1,24 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
-using Qase.Utilities;
+using Qase.Entities.TestData;
+using Qase.Tests.Settings;
 
 namespace Qase.Tests.UI;
 
 [AllureNUnit]
-public class LoginTest : BaseTest
+public class LoginTest : ErrorLoginTestSettings
 {
     [Test]
-    [AllureOwner("Sergey Zarochentsev")]
-    [AllureSuite("Successful Login Test With Validations")]
-    [AllureLink("Successful Login","https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=0")]
-    public void Authorization()
-    {
-        MainPageSteps
-            .OpenSite()
-            .ValidateIsMainPageOpened()
-            .ClickLoginButton()
-            .ValidateIsLoginPageOpened();
-
-        LoginSteps
-            .InputData(Email, Password)
-            .LoginButtonClick()
-            .ValidateIsProjectsPageOpened();
-        
-        ScreenShotter.TakeScreenshot();
-    }
-
-    [Test]
+    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Error Login Test With Validations")]
     [AllureLink("Error Login", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=233756267")]
-    public void AuthorizationError()
+    public void ErrorAuthorization()
     {
-        MainPageSteps
-            .OpenSite()
-            .ValidateIsMainPageOpened()
-            .ClickLoginButton()
-            .ValidateIsLoginPageOpened();
-
-        LoginSteps
-            .InputData(Email, "123456")
-            .LoginButtonClick()
-            .ValidateErrorMessage();
+        LoginPageSteps
+            .OpenPage()
+            .UserLogin(Authentication.FakeUser().Email, Authentication.FakeUser().Password);
         
-        ScreenShotter.TakeScreenshot();
+        Assert.That(LoginPage.ErrorMessageText(), Is.EqualTo("These credentials do not match our records."), "Checking error message's text if credentials are wrong");
     }
 }

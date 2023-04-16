@@ -1,4 +1,8 @@
-﻿namespace SeleniumWrapper.Helpers;
+﻿using NLog;
+using NLog.Config;
+using NLog.Targets;
+
+namespace Qase.Utilities;
 
 public sealed class Logger
 {

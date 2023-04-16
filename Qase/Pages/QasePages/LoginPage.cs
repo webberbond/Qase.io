@@ -1,47 +1,61 @@
 ﻿using OpenQA.Selenium;
-using Qase.Components;
-using SeleniumWrapper.Utils;
+using SeleniumExtras.PageObjects;
 
 namespace Qase.Pages.QasePages;
 
 public class LoginPage : BasePage
 {
-    public LoginPage(Browser browser) : base(browser)
+    public LoginPage(IWebDriver webDriver) : base(webDriver)
     {
+        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//a[@class='logo']");
-    
-    private static LoginPageComponents LoginPageComponents => new();
+
+    protected override string UrlPath => "/login";
+
+    [FindsBy(How = How.CssSelector, Using = "#inputEmail")]
+    private IWebElement _emailInputField;
+
+    [FindsBy(How = How.CssSelector, Using = "#inputPassword")]
+    private IWebElement _passwordInputField;
+
+    [FindsBy(How = How.CssSelector, Using = "#btnLogin")]
+    private IWebElement _submitButton;
+
+    [FindsBy(How = How.CssSelector, Using = ".form-control-feedback")]
+    private IWebElement _errorMessageField;
 
     public LoginPage InputEmail(string email)
     {
-        LoginPageComponents.EmailInputField.SendTextWithClear(email);
+        _emailInputField.Clear();
+        _emailInputField.SendKeys(email);
 
         return this;
     }
-
+    
     public LoginPage InputPassword(string password)
     {
-        LoginPageComponents.PasswordInputField.SendTextWithClear(password);
+        _passwordInputField.Clear();
+        _passwordInputField.SendKeys(password);
 
         return this;
     }
-
+    
     public LoginPage SubmitButton()
     {
-        LoginPageComponents.SubmitButton.Click();
+        _submitButton.Click();
 
         return this;
     }
-
-    public static bool ErrorMessageDisplayed()
+    
+    public bool ErrorMessageDisplayed()
     {
-        return LoginPageComponents.ErrorMessageField.IsDisplayed();
+        return _errorMessageField.Displayed;
     }
-
-    public static string ErrorMessageText()
+    
+    public string ErrorMessageText()
     {
-        return LoginPageComponents.ErrorMessageField.GetText();
+        return _errorMessageField.Text;
     }
 }

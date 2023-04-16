@@ -1,54 +1,23 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
-using Qase.Entities.DataFaker;
-using Qase.Entities.Models;
-using Qase.Utilities;
+using Qase.Tests.Settings;
 
 namespace Qase.Tests.UI;
 
 [AllureNUnit]
-public class DefectsTest : BaseTest
+public class DefectsTest : DefectsTestSettings
 {
-    private readonly DefectsModel _defectsModel = new DefectsModelDataFaker().Generate();
-    private readonly TestProjectModel _testProjectModel = new TestProjectModelDataFaker().Generate();
-
     [Test]
+    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Defects Test With Validations")]
-    [AllureLink("Create Defect","https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1673022051")]
+    [AllureLink("Create Defect", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1673022051")]
     public void CreateDefect()
     {
-        MainPageSteps
-            .OpenSite()
-            .ValidateIsMainPageOpened()
-            .ClickLoginButton()
-            .ValidateIsLoginPageOpened();
-
-        LoginSteps
-            .InputData(Email, Password)
-            .LoginButtonClick()
-            .ValidateIsProjectsPageOpened();
-
-        ProjectsPageSteps
-            .ValidateProjectsPageIsOpened()
-            .CreateNewProject()
-            .InputData(_testProjectModel)
-            .ClickSubmitButton()
-            .ValidateDetails(_testProjectModel);
-
         DefectsPageSteps
             .OpenDefectsPage()
-            .ValidateIsDefectsPageOpened()
-            .CreateNewDefect()
-            .InputData(_defectsModel)
-            .SubmitDefect()
-            .ValidateDefectWasCreated();
+            .CreateNewDefect(DefectsModel);
         
-        ScreenShotter.TakeScreenshot();
-        
-        ProjectsPageSteps
-            .OpenSettingsPage()
-            .DeleteProject()
-            .ValidateProjectsPageIsOpened();
+        Assert.That(DefectsPage.GetDefectTitle(), Is.EqualTo(DefectsModel.DefectTitle), "Checking if alert text is correct after creating a test defect.");
     }
 }
