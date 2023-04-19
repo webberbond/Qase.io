@@ -1,0 +1,291 @@
+{
+  "uuid": "c36ee5a6-1149-40cd-8b4c-ecc1ec29b33d-tr-0-1001",
+  "historyId": "Qase.Tests.UI.EnvironmentsTest.EnvironmentCreationTest",
+  "fullName": "Qase.Tests.UI.EnvironmentsTest.EnvironmentCreationTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "EnvironmentCreationTest"
+    },
+    {
+      "name": "testClass",
+      "value": "EnvironmentsTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Error Login Test With Validations"
+    }
+  ],
+  "links": [],
+  "name": "EnvironmentCreationTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "EnvironmentCreationTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933212283,
+      "stop": 1681933214087
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681933214095,
+      "stop": 1681933218308
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933218310,
+      "stop": 1681933218392
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681933218392,
+      "stop": 1681933218773
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933218774,
+      "stop": 1681933218832
+    },
+    {
+      "name": "Create New Environment",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933218833,
+      "stop": 1681933220544
+    },
+    {
+      "name": "Input Information",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testEnvironment",
+          "value": "Qase.Entities.Models.TestEnvironmentModel"
+        }
+      ],
+      "start": 1681933220544,
+      "stop": 1681933221413
+    },
+    {
+      "name": "Save Environment",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933221413,
+      "stop": 1681933221467
+    },
+    {
+      "name": "Get Environment Title",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933221468,
+      "stop": 1681933222196
+    },
+    {
+      "name": "Open Project Settings",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933222532,
+      "stop": 1681933222611
+    },
+    {
+      "name": "Get Project Name",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933222611,
+      "stop": 1681933223332
+    },
+    {
+      "name": "Get Project Code",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933223332,
+      "stop": 1681933223354
+    },
+    {
+      "name": "Get Project Description",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933223355,
+      "stop": 1681933223400
+    },
+    {
+      "name": "Delete project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681933223406,
+      "stop": 1681933224755
+    }
+  ],
+  "attachments": [
+    {
+      "name": "EnvironmentCreationTest_04_20_2023.png",
+      "source": "5f4d45bd8b7b462ebf2408a992b3d377-attachment.png",
+      "type": "image/png"
+    },
+    {
+      "name": "Console Output",
+      "source": "6d80619442a547f19d454cc0bcabb905-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681933210569,
+  "stop": 1681933224999
+}

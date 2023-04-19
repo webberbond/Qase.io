@@ -1,0 +1,362 @@
+{
+  "uuid": "40e6bbf0-710e-4455-a30e-584aef47ebbe-tr-0-1005",
+  "historyId": "Qase.Tests.UI.PlansTest.TestPlanCreation",
+  "fullName": "Qase.Tests.UI.PlansTest.TestPlanCreation",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestPlanCreation"
+    },
+    {
+      "name": "testClass",
+      "value": "PlansTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Plans Test With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Test Plan",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1547098580",
+      "type": "link"
+    }
+  ],
+  "name": "TestPlanCreation",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TestPlanCreation"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930471968,
+      "stop": 1681930473855
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681930473855,
+      "stop": 1681930478235
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930478235,
+      "stop": 1681930478340
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681930478340,
+      "stop": 1681930478905
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930478905,
+      "stop": 1681930478986
+    },
+    {
+      "name": "Create New Test Case",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930478986,
+      "stop": 1681930480678
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testCase",
+          "value": "Qase.Entities.Models.TestCaseModel"
+        }
+      ],
+      "start": 1681930480678,
+      "stop": 1681930483376
+    },
+    {
+      "name": "Save Test Case",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930483376,
+      "stop": 1681930483425
+    },
+    {
+      "name": "Get Project Title",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930483425,
+      "stop": 1681930483839
+    },
+    {
+      "name": "Create New Test Plan",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930483840,
+      "stop": 1681930484214
+    },
+    {
+      "name": "Input Information",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testPlan",
+          "value": "Qase.Entities.Models.TestPlanModel"
+        }
+      ],
+      "start": 1681930484215,
+      "stop": 1681930484655
+    },
+    {
+      "name": "Add Test Cases",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930484656,
+      "stop": 1681930484896
+    },
+    {
+      "name": "Save Test Plan",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930484897,
+      "stop": 1681930484945
+    },
+    {
+      "name": "Get Test Plan Title",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930484945,
+      "stop": 1681930485719
+    },
+    {
+      "name": "Open Project Settings",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930486085,
+      "stop": 1681930486127
+    },
+    {
+      "name": "Get Project Name",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930486127,
+      "stop": 1681930486727
+    },
+    {
+      "name": "Get Project Code",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930486727,
+      "stop": 1681930486749
+    },
+    {
+      "name": "Get Project Description",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930486749,
+      "stop": 1681930486764
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestPlanCreation_04_19_2023.png",
+      "source": "125a99729d564263ab0769a345aee9b5-attachment.png",
+      "type": "image/png"
+    },
+    {
+      "name": "Console Output",
+      "source": "79130bbb8712408ab3a2e6a607b6c1e9-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681930470066,
+  "stop": 1681930486944
+}

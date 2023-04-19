@@ -1,0 +1,12 @@
+{
+  "uuid": "tc-0-1001",
+  "name": "Qase.Tests.UI.DefectsTest.CreateDefect",
+  "children": [
+    "3b0f13db-da94-4628-902d-c1b9f4c50f90-tr-0-1001"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1681930447022,
+  "stop": 1681930465264
+}

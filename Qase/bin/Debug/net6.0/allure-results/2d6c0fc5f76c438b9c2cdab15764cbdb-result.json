@@ -1,0 +1,81 @@
+{
+  "uuid": "db8b3bb2-ec8b-429a-99f1-bebc82a0d0a9-tr-0-1011",
+  "historyId": "Qase.Tests.UI.RunsTest.CreateTestRun",
+  "fullName": "Qase.Tests.UI.RunsTest.CreateTestRun",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateTestRun"
+    },
+    {
+      "name": "testClass",
+      "value": "RunsTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Creation of New Test Run With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Test Run",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=856280847",
+      "type": "link"
+    }
+  ],
+  "name": "CreateTestRun",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.WebDriverException : An unknown exception was encountered sending an HTTP request to the remote WebDriver server for URL http://localhost:3115/session/16e85e8c3e5832a57bb43ba2fc458736/url. The exception message was: An error occurred while sending the request.\r\n  ----> System.Net.Http.HttpRequestException : An error occurred while sending the request.\r\n  ----> System.IO.IOException : Unable to read data from the transport connection: Удаленный хост принудительно разорвал существующее подключение..\r\n  ----> System.Net.Sockets.SocketException : Удаленный хост принудительно разорвал существующее подключение.",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.Around(String name, Object[] args, Func`2 target, MethodBase metadata, Type returnType)\r\n   at Qase.Steps.LoginPageSteps.__a$_around_OpenPage_100663356_w_0(Object[] )\r\n   at Qase.Steps.LoginPageSteps.OpenPage()\r\n   at Qase.Tests.Settings.LoginTestSettings.SetUp() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\LoginTestSettings.cs:line 24\r\n--WebDriverException\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(Uri url)\r\n   at Qase.Pages.BasePage.OpenPage() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\BasePage.cs:line 28\r\n   at Qase.Steps.LoginPageSteps.__a$_around_OpenPage_100663356_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\LoginPageSteps.cs:line 19\r\n   at Qase.Steps.LoginPageSteps.__a$_around_OpenPage_100663356_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)\r\n--HttpRequestException\r\n   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)\r\n   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n--IOException\r\n   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)\r\n   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)\r\n   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)\r\n--SocketException\r\n"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "An unknown exception was encountered sending an HTTP request to the remote WebDriver server for URL http://localhost:3115/session/16e85e8c3e5832a57bb43ba2fc458736/url. The exception message was: An error occurred while sending the request.",
+        "trace": "   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.set_Url(String value)\r\n   at OpenQA.Selenium.Navigator.GoToUrl(Uri url)\r\n   at Qase.Pages.BasePage.OpenPage() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\BasePage.cs:line 28\r\n   at Qase.Steps.LoginPageSteps.__a$_around_OpenPage_100663356_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\LoginPageSteps.cs:line 19\r\n   at Qase.Steps.LoginPageSteps.__a$_around_OpenPage_100663356_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752576546,
+      "stop": 1681752605259
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "30515055cf2c427099aa99eddc97d5e2-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681752574736,
+  "stop": 1681752605261
+}

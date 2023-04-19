@@ -1,0 +1,192 @@
+{
+  "uuid": "01e0343f-1f64-41c0-a7ce-165d6075a2fe-tr-0-1001",
+  "historyId": "Qase.Tests.UI.PlansTest.TestPlanCreation",
+  "fullName": "Qase.Tests.UI.PlansTest.TestPlanCreation",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#22"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestPlanCreation"
+    },
+    {
+      "name": "testClass",
+      "value": "PlansTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Plans Test With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Test Plan",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1547098580",
+      "type": "link"
+    }
+  ],
+  "name": "TestPlanCreation",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //a[@id='create-case-button']\r\nTearDown : System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <a class=\"prLoyX\" href=\"/projects\">...</a> is not clickable at point (97, 24). Other element would receive the click: <div class=\"ReactModal__Overlay ReactModal__Overlay--after-open G3DUty\">...</div>\n  (Session info: chrome=112.0.5615.86)",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.Around(String name, Object[] args, Func`2 target, MethodBase metadata, Type returnType)\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_w_0(Object[] )\r\n   at Qase.Steps.RepositoryPageSteps.CreateNewTestCase()\r\n   at Qase.Tests.Settings.RepositoryTestSettings.SetUp() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\RepositoryTestSettings.cs:line 18\r\n--NoSuchElementException\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at Qase.Pages.QasePages.RepositoryPage.CreateNewTestCase() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 43\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 20\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)\r\n--TearDown\r\n   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.Around(String name, Object[] args, Func`2 target, MethodBase metadata, Type returnType)\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_DeleteProject_100663371_w_0(Object[] )\r\n   at Qase.Steps.ProjectsPageSteps.DeleteProject()\r\n   at Qase.Tests.Settings.ProjectsTestSettings.TearDown() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\ProjectsTestSettings.cs:line 30\r\n--ElementClickInterceptedException\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at Qase.Pages.QasePages.ProjectsPage.DeleteProject() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 123\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_DeleteProject_100663371_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 84\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_DeleteProject_100663371_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681753016310,
+      "stop": 1681753018699
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681753018704,
+      "stop": 1681753022767
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681753022769,
+      "stop": 1681753022889
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681753022890,
+      "stop": 1681753023477
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681753023478,
+      "stop": 1681753023562
+    },
+    {
+      "name": "Create New Test Case",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Could not find element by: By.XPath: //a[@id='create-case-button']",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at Qase.Pages.QasePages.RepositoryPage.CreateNewTestCase() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 43\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 20\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681753023564,
+      "stop": 1681753028660
+    },
+    {
+      "name": "delete project",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "element click intercepted: Element <a class=\"prLoyX\" href=\"/projects\">...</a> is not clickable at point (97, 24). Other element would receive the click: <div class=\"ReactModal__Overlay ReactModal__Overlay--after-open G3DUty\">...</div>\n  (Session info: chrome=112.0.5615.86)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at Qase.Pages.QasePages.ProjectsPage.DeleteProject() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 123\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_DeleteProject_100663371_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 84\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_DeleteProject_100663371_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681753029035,
+      "stop": 1681753030115
+    }
+  ],
+  "attachments": [
+    {
+      "name": "TestPlanCreation_04_17_2023.png",
+      "source": "1d2e9a6466f84178af170aeefeb79023-attachment.png",
+      "type": "image/png"
+    },
+    {
+      "name": "Console Output",
+      "source": "6e58ac6f72ff4b49a25a61fa6c60f2ee-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681753014679,
+  "stop": 1681753030129
+}

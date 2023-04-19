@@ -1,0 +1,12 @@
+{
+  "uuid": "tc-0-1001",
+  "name": "Qase.Tests.UI.RepositoryTest.CreateNewTestCase",
+  "children": [
+    "7411f9ae-66a4-4a8f-8c89-055c801b8a2d-tr-0-1001"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1681752424159,
+  "stop": 1681752438802
+}

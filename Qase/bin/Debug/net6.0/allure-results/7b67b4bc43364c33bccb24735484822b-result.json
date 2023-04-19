@@ -1,0 +1,140 @@
+{
+  "uuid": "6913ab71-b1fe-4457-a464-7ab90f2505fd-tr-0-1001",
+  "historyId": "Qase.Tests.UI.DefectsTest.CreateDefect",
+  "fullName": "Qase.Tests.UI.DefectsTest.CreateDefect",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#31"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateDefect"
+    },
+    {
+      "name": "testClass",
+      "value": "DefectsTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Defects Test With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Defect",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1673022051",
+      "type": "link"
+    }
+  ],
+  "name": "CreateDefect",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.NoSuchElementException : Could not find element by: By.XPath: //h1[@class='fGDnu0']\r\nTearDown : System.ObjectDisposedException : Cannot access a disposed object.\r\nObject name: 'System.Net.Http.HttpClient'.",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.Around(String name, Object[] args, Func`2 target, MethodBase metadata, Type returnType)\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_GetProjectTitle_100663371_w_0(Object[] )\r\n   at Qase.Steps.ProjectsPageSteps.GetProjectTitle()\r\n   at Qase.Tests.Settings.RepositoryTestSettings.SetUp() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\RepositoryTestSettings.cs:line 22\r\n--NoSuchElementException\r\n   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Text()\r\n   at Qase.Pages.QasePages.ProjectsPage.GetProjectTitle() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 103\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_GetProjectTitle_100663371_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 54\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_GetProjectTitle_100663371_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)\r\n--TearDown\r\n   at System.Net.Http.HttpClient.CheckDisposed()\r\n   at System.Net.Http.HttpClient.CheckRequestBeforeSend(HttpRequestMessage request)\r\n   at System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)\r\n   at System.Net.Http.HttpClient.SendAsync(HttpRequestMessage request)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)\r\n   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(IWebDriver driver)\r\n   at Qase.Utilities.ScreenShotter.TakeScreenshot() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Utilities\\ScreenShotter.cs:line 12\r\n   at Qase.Tests.Settings.ProjectsTestSettings.TearDown() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\ProjectsTestSettings.cs:line 25"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681751993593,
+      "stop": 1681751995564
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681751995569,
+      "stop": 1681752000322
+    },
+    {
+      "name": "Get Project Title",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Could not find element by: By.XPath: //h1[@class='fGDnu0']",
+        "trace": "   at SeleniumExtras.PageObjects.DefaultElementLocator.LocateElement(IEnumerable`1 bys)\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_WrappedElement()\r\n   at SeleniumExtras.PageObjects.WebElementProxy.get_Text()\r\n   at Qase.Pages.QasePages.ProjectsPage.GetProjectTitle() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 103\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_GetProjectTitle_100663371_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 54\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_GetProjectTitle_100663371_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752000325,
+      "stop": 1681752005460
+    },
+    {
+      "name": "delete project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752005863,
+      "stop": 1681752006204
+    }
+  ],
+  "attachments": [
+    {
+      "name": "CreateDefect_04_17_2023.png",
+      "source": "9f2348647cd3491f8abfa2a3fd36a833-attachment.png",
+      "type": "image/png"
+    },
+    {
+      "name": "Console Output",
+      "source": "31165052a06c48138112807cc846c15b-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681751990328,
+  "stop": 1681752006478
+}

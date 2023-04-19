@@ -1,0 +1,12 @@
+{
+  "uuid": "tc-0-1005",
+  "name": "Qase.Tests.UI.PlansTest.TestPlanCreation",
+  "children": [
+    "6bc7caa2-1c47-4b14-bc62-c0218aa7bec5-tr-0-1005"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1681757928720,
+  "stop": 1681757947469
+}

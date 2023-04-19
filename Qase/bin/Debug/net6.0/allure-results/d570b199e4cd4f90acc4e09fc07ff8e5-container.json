@@ -1,0 +1,26 @@
+{
+  "uuid": "tc-0-1000",
+  "name": "Qase.Tests.UI.DefectsTest",
+  "children": [],
+  "befores": [
+    {
+      "name": "OneTimeSetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752968365,
+      "stop": 1681752968425
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1681752968363,
+  "stop": 1681752982466
+}

@@ -1,0 +1,170 @@
+{
+  "uuid": "0e751bcd-f0cb-4674-b5d0-eb3bc80de6d5-tr-0-1001",
+  "historyId": "Qase.Tests.UI.ProjectsTest.TestProjectCreation",
+  "fullName": "Qase.Tests.UI.ProjectsTest.TestProjectCreation",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "TestProjectCreation"
+    },
+    {
+      "name": "testClass",
+      "value": "ProjectsTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Projects Test With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Test Project",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=676356653",
+      "type": "link"
+    }
+  ],
+  "name": "TestProjectCreation",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.WebDriverException : disconnected: unable to send message to renderer\n  (failed to check if window was closed: disconnected: not connected to DevTools)\n  (Session info: chrome=112.0.5615.86)\r\nTearDown : OpenQA.Selenium.WebDriverException : disconnected: not connected to DevTools\n  (failed to check if window was closed: disconnected: not connected to DevTools)\n  (Session info: chrome=112.0.5615.86)",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.Around(String name, Object[] args, Func`2 target, MethodBase metadata, Type returnType)\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_w_0(Object[] )\r\n   at Qase.Steps.ProjectsPageSteps.OpenProjectSettings()\r\n   at Qase.Tests.UI.ProjectsTest.TestProjectCreation() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\UI\\ProjectsTest.cs:line 18\r\n--WebDriverException\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at Qase.Pages.QasePages.ProjectsPage.get_ProjectSettingsButton() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 28\r\n   at Qase.Pages.QasePages.ProjectsPage.OpenProjectSettings() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 82\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 46\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)\r\n--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(IWebDriver driver)\r\n   at Qase.Utilities.ScreenShotter.TakeScreenshot() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Utilities\\ScreenShotter.cs:line 12\r\n   at Qase.Tests.Settings.ProjectsTestSettings.TearDown() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\ProjectsTestSettings.cs:line 28"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681840687275,
+      "stop": 1681840689189
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681840689193,
+      "stop": 1681840693458
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681840693459,
+      "stop": 1681840693541
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681840693542,
+      "stop": 1681840694122
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681840694122,
+      "stop": 1681840694194
+    },
+    {
+      "name": "Open Project Settings",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "disconnected: unable to send message to renderer\n  (failed to check if window was closed: disconnected: not connected to DevTools)\n  (Session info: chrome=112.0.5615.86)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at Qase.Pages.QasePages.ProjectsPage.get_ProjectSettingsButton() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 28\r\n   at Qase.Pages.QasePages.ProjectsPage.OpenProjectSettings() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 82\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 46\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681840694221,
+      "stop": 1681840696663
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "6349fe2290ea4526a67c6d7483d6e9f4-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681840685324,
+  "stop": 1681840696677
+}

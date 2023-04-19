@@ -1,0 +1,210 @@
+{
+  "uuid": "979adc8c-7d26-4326-858d-471bb7a6e587-tr-0-1009",
+  "historyId": "Qase.Tests.UI.RepositoryTest.CreateNewTestCase",
+  "fullName": "Qase.Tests.UI.RepositoryTest.CreateNewTestCase",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewTestCase"
+    },
+    {
+      "name": "testClass",
+      "value": "RepositoryTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Creation of New Test Case With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Test Case",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1138196004",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewTestCase",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@id='title']\"}\n  (Session info: chrome=112.0.5615.86)",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_InputInformation_100663375_w_0(Object[] )\r\n   at Qase.Steps.RepositoryPageSteps.InputInformation(TestCaseModel testCase) in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 19\r\n   at Qase.Tests.Settings.RepositoryTestSettings.SetUp() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\RepositoryTestSettings.cs:line 18\r\n--NoSuchElementException\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at Qase.Pages.QasePages.RepositoryPage.get_TitleInputField() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 20\r\n   at Qase.Pages.QasePages.RepositoryPage.InputTitle(String testCaseTitle) in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 41\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_InputInformation_100663375_o(TestCaseModel testCase) in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 28\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_InputInformation_100663375_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681757368864,
+      "stop": 1681757370816
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681757370817,
+      "stop": 1681757374708
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681757374708,
+      "stop": 1681757374827
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681757374827,
+      "stop": 1681757375480
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681757375480,
+      "stop": 1681757375573
+    },
+    {
+      "name": "Create New Test Case",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681757375573,
+      "stop": 1681757376097
+    },
+    {
+      "name": "Input Data",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[@id='title']\"}\n  (Session info: chrome=112.0.5615.86)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at Qase.Pages.QasePages.RepositoryPage.get_TitleInputField() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 20\r\n   at Qase.Pages.QasePages.RepositoryPage.InputTitle(String testCaseTitle) in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 41\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_InputInformation_100663375_o(TestCaseModel testCase) in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 28\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_InputInformation_100663375_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testCase",
+          "value": "Qase.Entities.Models.TestCaseModel"
+        }
+      ],
+      "start": 1681757376098,
+      "stop": 1681757381107
+    },
+    {
+      "name": "delete project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681757381443,
+      "stop": 1681757382650
+    }
+  ],
+  "attachments": [
+    {
+      "name": "CreateNewTestCase_04_17_2023.png",
+      "source": "b32683ac948a4ab286dad9f699ebfd1c-attachment.png",
+      "type": "image/png"
+    },
+    {
+      "name": "Console Output",
+      "source": "2507b493a0e74926af3e9fdcdf9e7ef3-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681757366937,
+  "stop": 1681757382873
+}

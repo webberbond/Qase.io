@@ -1,0 +1,192 @@
+{
+  "uuid": "81069601-cf33-4447-b95e-c4f063950361-tr-0-1009",
+  "historyId": "Qase.Tests.UI.RepositoryTest.CreateNewTestCase",
+  "fullName": "Qase.Tests.UI.RepositoryTest.CreateNewTestCase",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateNewTestCase"
+    },
+    {
+      "name": "testClass",
+      "value": "RepositoryTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Creation of New Test Case With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Test Case",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1138196004",
+      "type": "link"
+    }
+  ],
+  "name": "CreateNewTestCase",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@id='create-case-button']\"}\n  (Session info: chrome=112.0.5615.86)\r\nTearDown : System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> System.NullReferenceException : Object reference not set to an instance of an object.",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_w_0(Object[] )\r\n   at Qase.Steps.RepositoryPageSteps.CreateNewTestCase()\r\n   at Qase.Tests.Settings.RepositoryTestSettings.SetUp() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\RepositoryTestSettings.cs:line 18\r\n--NoSuchElementException\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at Qase.Pages.QasePages.RepositoryPage.get_CreateTestCaseButton() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 18\r\n   at Qase.Pages.QasePages.RepositoryPage.CreateNewTestCase() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 35\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 20\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)\r\n--TearDown\r\n   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_w_0(Object[] )\r\n   at Qase.Steps.ProjectsPageSteps.OpenProjectSettings()\r\n   at Qase.Tests.Settings.ProjectsTestSettings.TearDown() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\ProjectsTestSettings.cs:line 30\r\n--NullReferenceException\r\n   at Qase.Pages.QasePages.ProjectsPage.OpenProjectSettings() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 82\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 46\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930501141,
+      "stop": 1681930503896
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681930503896,
+      "stop": 1681930508218
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930508218,
+      "stop": 1681930508302
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681930508302,
+      "stop": 1681930508872
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930508872,
+      "stop": 1681930508959
+    },
+    {
+      "name": "Create New Test Case",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@id='create-case-button']\"}\n  (Session info: chrome=112.0.5615.86)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at Qase.Pages.QasePages.RepositoryPage.get_CreateTestCaseButton() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 18\r\n   at Qase.Pages.QasePages.RepositoryPage.CreateNewTestCase() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 35\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 20\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930508959,
+      "stop": 1681930514072
+    },
+    {
+      "name": "Open Project Settings",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Object reference not set to an instance of an object.",
+        "trace": "   at Qase.Pages.QasePages.ProjectsPage.OpenProjectSettings() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\ProjectsPage.cs:line 82\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\ProjectsPageSteps.cs:line 46\r\n   at Qase.Steps.ProjectsPageSteps.__a$_around_OpenProjectSettings_100663366_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681930514420,
+      "stop": 1681930517021
+    }
+  ],
+  "attachments": [
+    {
+      "name": "CreateNewTestCase_04_19_2023.png",
+      "source": "e37ee9f04be840e78b8cab3941b58add-attachment.png",
+      "type": "image/png"
+    },
+    {
+      "name": "Console Output",
+      "source": "969169982580408eaf53dc1ec467531e-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681930499518,
+  "stop": 1681930517022
+}

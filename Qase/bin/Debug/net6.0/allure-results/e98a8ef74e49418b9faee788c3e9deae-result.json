@@ -1,0 +1,170 @@
+{
+  "uuid": "054e6e67-8104-4eaf-b77c-446d4c885cc7-tr-0-1001",
+  "historyId": "Qase.Tests.UI.DefectsTest.CreateDefect",
+  "fullName": "Qase.Tests.UI.DefectsTest.CreateDefect",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#33"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "CreateDefect"
+    },
+    {
+      "name": "testClass",
+      "value": "DefectsTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Successful Defects Test With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Create Defect",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1673022051",
+      "type": "link"
+    }
+  ],
+  "name": "CreateDefect",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.\r\n  ----> System.NullReferenceException : Object reference not set to an instance of an object.\r\nTearDown : OpenQA.Selenium.NoSuchWindowException : no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=112.0.5615.86)",
+    "trace": "   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)\r\n   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)\r\n   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.Around(String name, Object[] args, Func`2 target, MethodBase metadata, Type returnType)\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_w_0(Object[] )\r\n   at Qase.Steps.RepositoryPageSteps.CreateNewTestCase()\r\n   at Qase.Tests.Settings.RepositoryTestSettings.SetUp() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\RepositoryTestSettings.cs:line 18\r\n--NullReferenceException\r\n   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at Qase.Pages.QasePages.RepositoryPage.CreateNewTestCase() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 43\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 20\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)\r\n--TearDown\r\n   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.GetScreenshot()\r\n   at OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(IWebDriver driver)\r\n   at Qase.Utilities.ScreenShotter.TakeScreenshot() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Utilities\\ScreenShotter.cs:line 12\r\n   at Qase.Tests.Settings.ProjectsTestSettings.TearDown() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Tests\\Settings\\ProjectsTestSettings.cs:line 29"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752970386,
+      "stop": 1681752972452
+    },
+    {
+      "name": "Log in with sergey.zrch@gmail.com and Deadspace456,",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "sergey.zrch@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadspace456,"
+        }
+      ],
+      "start": 1681752972462,
+      "stop": 1681752978230
+    },
+    {
+      "name": "Create New Project",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752978232,
+      "stop": 1681752978330
+    },
+    {
+      "name": "Input Data",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "testProject",
+          "value": "Qase.Entities.Models.TestProjectModel"
+        }
+      ],
+      "start": 1681752978331,
+      "stop": 1681752978671
+    },
+    {
+      "name": "Click Submit Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752978671,
+      "stop": 1681752978721
+    },
+    {
+      "name": "Create New Test Case",
+      "status": "broken",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "Object reference not set to an instance of an object.",
+        "trace": "   at SeleniumExtras.PageObjects.WebElementProxy.Click()\r\n   at Qase.Pages.QasePages.RepositoryPage.CreateNewTestCase() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Pages\\QasePages\\RepositoryPage.cs:line 43\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_o() in C:\\Users\\HomeUser\\Desktop\\Qase.io-QaseProject\\Qase\\Steps\\RepositoryPageSteps.cs:line 20\r\n   at Qase.Steps.RepositoryPageSteps.__a$_around_CreateNewTestCase_100663373_u(Object[] )\r\n   at NUnit.Allure.Core.Steps.AllureStepAspect.WrapSync[T](Func`2 target, Object[] args, MethodBase metadata, String stepName, List`1 stepParameters)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752978722,
+      "stop": 1681752982414
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "13ef086a1f464f70ad9428e9788f27b7-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681752968446,
+  "stop": 1681752982435
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "tc-0-1008",
+  "name": "Qase.Tests.UI.RepositoryTest",
+  "children": [],
+  "befores": [
+    {
+      "name": "OneTimeSetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681757366934,
+      "stop": 1681757366936
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1681757366934,
+  "stop": 1681757382876
+}

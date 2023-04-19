@@ -1,0 +1,117 @@
+{
+  "uuid": "d56b6c66-f460-4801-b1f7-68aca1258caa-tr-0-1003",
+  "historyId": "Qase.Tests.UI.LoginTest.ErrorAuthorization",
+  "fullName": "Qase.Tests.UI.LoginTest.ErrorAuthorization",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#5"
+    },
+    {
+      "name": "host",
+      "value": "WEBBER"
+    },
+    {
+      "name": "package",
+      "value": "Qase.Tests.UI"
+    },
+    {
+      "name": "testMethod",
+      "value": "ErrorAuthorization"
+    },
+    {
+      "name": "testClass",
+      "value": "LoginTest"
+    },
+    {
+      "name": "owner",
+      "value": "Sergey Zarochentsev"
+    },
+    {
+      "name": "suite",
+      "value": "Error Login Test With Validations"
+    }
+  ],
+  "links": [
+    {
+      "name": "Error Login",
+      "url": "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=233756267",
+      "type": "link"
+    }
+  ],
+  "name": "ErrorAuthorization",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "ErrorAuthorization"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Open Login Page",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752526866,
+      "stop": 1681752528713
+    },
+    {
+      "name": "Log in with govere123@gmail.com and Deadsaaaa21",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "email",
+          "value": "govere123@gmail.com"
+        },
+        {
+          "name": "password",
+          "value": "Deadsaaaa21"
+        }
+      ],
+      "start": 1681752528713,
+      "stop": 1681752529930
+    },
+    {
+      "name": "Get Error Message",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681752529931,
+      "stop": 1681752529968
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "f869b5dbc66e4cc59af90c2699dbdd64-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1681752524950,
+  "stop": 1681752530165
+}

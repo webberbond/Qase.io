@@ -1,0 +1,12 @@
+{
+  "uuid": "tc-0-1003",
+  "name": "Qase.Tests.UI.LoginTest.ErrorAuthorization",
+  "children": [
+    "0cdf430f-dc68-44af-9510-245126f53ab0-tr-0-1003"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1681757197833,
+  "stop": 1681757202940
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "tc-0-1006",
+  "name": "Qase.Tests.UI.PlansTest",
+  "children": [],
+  "befores": [
+    {
+      "name": "OneTimeSetUp",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1681934342615,
+      "stop": 1681934342659
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1681934342615,
+  "stop": 1681934360605
+}
