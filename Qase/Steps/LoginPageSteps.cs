@@ -6,19 +6,17 @@ namespace Qase.Steps;
 
 public class LoginPageSteps 
 {
-    private IWebDriver WebDriver { get; }
+    private readonly LoginPage _loginPage;
     
-    public LoginPageSteps(IWebDriver webDriver) 
+    public LoginPageSteps(IWebDriver webDriver)
     {
-        WebDriver = webDriver;
+        _loginPage = new LoginPage(webDriver);
     }
-    
-    private LoginPage LoginPage => new(WebDriver);
 
     [AllureStep("Open Login Page")]
     public LoginPageSteps OpenPage()
     {
-        LoginPage.OpenPage();
+        _loginPage.OpenPage();
 
         return this;
     }
@@ -26,10 +24,16 @@ public class LoginPageSteps
     [AllureStep("Log in with {0} and {1}")]
     public LoginPageSteps UserLogin(string email, string password)
     {
-        LoginPage.InputEmail(email);
-        LoginPage.InputPassword(password);
-        LoginPage.SubmitButton();
+        _loginPage.InputEmail(email);
+        _loginPage.InputPassword(password);
+        _loginPage.SubmitButtonClick();
         
         return this;
+    }
+    
+    [AllureStep("Get Error Message")]
+    public string GetErrorMessage()
+    {
+        return _loginPage.ErrorMessageText();
     }
 }

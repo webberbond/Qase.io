@@ -20,6 +20,6 @@ public class RunsTest : RunsTestSettings
             .StartTestRun()
             .CompleteTestRun();
 
-        Assert.That(RunsPage.IsShareReportButtonDisplayed, Is.True, "Checking that the button 'Share Report' is displayed after creating a test run.");
+        Assert.That(RunsPageSteps.CheckIfButtonIsDisplayed(), Is.True, "Checking that the button 'Share Report' is displayed after creating a test run.");
     }
 }

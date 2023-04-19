@@ -7,19 +7,17 @@ namespace Qase.Steps;
 
 public class DefectsPageSteps
 {
-    private IWebDriver WebDriver { get; }
+    private readonly DefectsPage _defectsPage;
     
-    public DefectsPageSteps(IWebDriver webDriver) 
+    public DefectsPageSteps(IWebDriver webDriver)
     {
-        WebDriver = webDriver;
+        _defectsPage = new DefectsPage(webDriver);
     }
-    
-    private DefectsPage DefectsPage => new(WebDriver);
 
     [AllureStep("Open Defects Page")]
     public DefectsPageSteps OpenDefectsPage()
     {
-        DefectsPage.CreateNewDefect();
+        _defectsPage.CreateNewDefect();
 
         return this;
     }
@@ -27,10 +25,17 @@ public class DefectsPageSteps
     [AllureStep("Create New Defect")]
     public DefectsPageSteps CreateNewDefect(DefectsModel defectsModel)
     {
-        DefectsPage.InputDefectTitle(defectsModel.DefectTitle);
-        DefectsPage.InputDefectActualResult(defectsModel.ActualResult);
-        DefectsPage.CreateDefect();
+        _defectsPage
+            .InputDefectTitle(defectsModel.DefectTitle)
+            .InputDefectActualResult(defectsModel.ActualResult)
+            .CreateDefect();
         
         return this;
+    }
+    
+    [AllureStep("Get Defect Title")]
+    public string GetDefectTitle()
+    {
+        return _defectsPage.GetDefectTitle();
     }
 }

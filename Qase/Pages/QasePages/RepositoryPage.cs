@@ -7,81 +7,73 @@ public class RepositoryPage : BasePage
 {
     public RepositoryPage(IWebDriver webDriver) : base(webDriver)
     {
-        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//h1[@class='fGDnu0']");
     
     protected override string UrlPath => string.Empty;
+    
+    private IWebElement Alert => WebDriver.FindElement(By.CssSelector("[role='alert']"));
 
-    [FindsBy(How = How.CssSelector, Using = "[role='alert']")]
-    private IWebElement _alert;
-    
-    [FindsBy(How = How.XPath, Using = "//a[@id='create-case-button']")]
-    private IWebElement _createTestCaseButton;
+    private IWebElement CreateTestCaseButton => WebDriver.FindElement(By.XPath("//a[@id='create-case-button']"));
 
-    [FindsBy(How = How.CssSelector, Using = "#title")]
-    private IWebElement _titleInputField;
-    
-    [FindsBy(How = How.XPath, Using = "//input[@id='0-description']")]
-    private IWebElement _descriptionInputField;
-    
-    [FindsBy(How = How.XPath, Using = "//input[@id='0-preconditions']")]
-    private IWebElement _preConditionsInputField;
-    
-    [FindsBy(How = How.XPath, Using = "//input[@id='0-postconditions']")]
-    private IWebElement _postConditionsInputField;
+    private IWebElement TitleInputField => WebDriver.FindElement(By.CssSelector("#title"));
 
-    [FindsBy(How = How.CssSelector, Using = "#save-case")]
-    private IWebElement _saveTestCaseButton;
+    private IWebElement DescriptionInputField => WebDriver.FindElement(By.XPath("//input[@id='0-description']"));
     
-    [FindsBy(How = How.CssSelector, Using = ".o0Jd8j")]
-    private IWebElement _infoField;
+    private IWebElement PreConditionsInputField => WebDriver.FindElement(By.XPath("//input[@id='0-preconditions']"));
+
+    private IWebElement PostConditionsInputField => WebDriver.FindElement(By.XPath("//input[@id='0-postconditions']"));
     
+    private IWebElement SaveTestCaseButton => WebDriver.FindElement(By.CssSelector("#save-case"));
+    
+    
+    private IWebElement InfoField => WebDriver.FindElement(By.CssSelector("button[type='submit']"));
+
     public RepositoryPage CreateNewTestCase()
     {
-        _createTestCaseButton.Click();
+        CreateTestCaseButton.Click();
 
         return this;
     }
     
     public RepositoryPage InputTitle(string testCaseTitle)
     {
-        _titleInputField.SendKeys(testCaseTitle);
+        TitleInputField.SendKeys(testCaseTitle);
 
         return this;
     }
     
     public RepositoryPage InputDescription(string testCaseDescription)
     {
-        _descriptionInputField.SendKeys(testCaseDescription);
+        DescriptionInputField.SendKeys(testCaseDescription);
 
         return this;
     }
     
     public RepositoryPage InputPreConditions(string testCasePreConditions)
     {
-        _preConditionsInputField.SendKeys(testCasePreConditions);
+        PreConditionsInputField.SendKeys(testCasePreConditions);
 
         return this;
     }
     
     public RepositoryPage InputPostConditions(string testCasePostConditions)
     {
-        _postConditionsInputField.SendKeys(testCasePostConditions);
+        PostConditionsInputField.SendKeys(testCasePostConditions);
 
         return this;
     }
 
     public RepositoryPage ClickSaveTestCaseButton()
     {
-        _saveTestCaseButton.Click();
+        SaveTestCaseButton.Click();
         
         return this;
     }
 
     public string GetAlertText()
     {
-        return _alert.Text;
+        return Alert.Text;
     }
 }

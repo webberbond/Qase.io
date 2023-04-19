@@ -7,19 +7,16 @@ namespace Qase.Steps;
 
 public class ProjectsPageSteps
 {
-    private IWebDriver WebDriver { get; }
-    
+    private readonly ProjectsPage _projectsPage;
     public ProjectsPageSteps(IWebDriver webDriver) 
     {
-        WebDriver = webDriver;
+        _projectsPage = new ProjectsPage(webDriver);
     }
     
-    private ProjectsPage ProjectsPage => new(WebDriver);
-
     [AllureStep("Create New Project")]
     public ProjectsPageSteps CreateNewProject()
     {
-        ProjectsPage.CreateNewProject();
+        _projectsPage.CreateNewProject();
 
         return this;
     }
@@ -27,7 +24,7 @@ public class ProjectsPageSteps
     [AllureStep("Input Data")]
     public ProjectsPageSteps InputInformation(TestProjectModel testProject)
     {
-        ProjectsPage
+        _projectsPage
             .InputProjectName(testProject.ProjectName)
             .InputProjectCode(testProject.ProjectCode)
             .InputProjectDescription(testProject.ProjectDescription);
@@ -38,7 +35,7 @@ public class ProjectsPageSteps
     [AllureStep("Click Submit Button")]
     public ProjectsPageSteps ClickSubmitButton()
     {
-        ProjectsPage.ClickSubmitButton();
+        _projectsPage.ClickSubmitButton();
         
         return this;
     }
@@ -46,7 +43,39 @@ public class ProjectsPageSteps
     [AllureStep("Open Project Settings")]
     public ProjectsPageSteps OpenProjectSettings()
     {
-        ProjectsPage.OpenProjectSettings();
+        _projectsPage.OpenProjectSettings();
+        
+        return this;
+    }
+    
+    [AllureStep("Get Project Title")]
+    public string GetProjectTitle()
+    {
+        return _projectsPage.GetProjectTitle();
+    }
+    
+    [AllureStep("Get Project Name")]
+    public string GetProjectName()
+    {
+        return _projectsPage.GetProjectName();
+    }
+    
+    [AllureStep("Get Project Code")]
+    public string GetProjectCode()
+    {
+        return _projectsPage.GetProjectCode();
+    }
+    
+    [AllureStep("Get Project Description")]
+    public string GetProjectDescription()
+    {
+        return _projectsPage.GetProjectDescription();
+    }
+    
+    [AllureStep("Delete project")]
+    public ProjectsPageSteps DeleteProject()
+    {
+        _projectsPage.DeleteProject();
         
         return this;
     }

@@ -7,20 +7,18 @@ namespace Qase.Steps;
 
 public class PlansPageSteps
 {
-    private IWebDriver WebDriver { get; }
+    private readonly PlansPage _plansPage;
     
     public PlansPageSteps(IWebDriver webDriver) 
     {
-        WebDriver = webDriver;
+        _plansPage = new PlansPage(webDriver);
     }
-    
-    private PlansPage PlansPage => new(WebDriver);
 
     [AllureStep("Create New Test Plan")]
     public PlansPageSteps CreateNewTestPlan()
     {
-        PlansPage.OpenTestPlans();
-        PlansPage.CreatePlanButtonClick();
+        _plansPage.OpenTestPlans();
+        _plansPage.CreatePlanButtonClick();
 
         return this;
     }
@@ -28,7 +26,7 @@ public class PlansPageSteps
     [AllureStep("Input Information")]
     public PlansPageSteps InputInformation(TestPlanModel testPlan)
     {
-        PlansPage
+        _plansPage
             .InputTitle(testPlan.PlanTitle)
             .InputDescription(testPlan.PlanDescription);
 
@@ -38,7 +36,7 @@ public class PlansPageSteps
     [AllureStep("Add Test Cases")]
     public PlansPageSteps AddTestCases()
     {
-        PlansPage
+        _plansPage
             .AddTestCasesButtonClick()
             .CreatedTestCaseButtonClick()
             .CreatedTestCaseCheckboxButtonClick()
@@ -50,8 +48,14 @@ public class PlansPageSteps
     [AllureStep("Save Test Plan")]
     public PlansPageSteps SaveTestPlan()
     {
-        PlansPage.SubmitPlanButtonClick();
+        _plansPage.SubmitPlanButtonClick();
         
         return this;
+    }
+    
+    [AllureStep("Get Test Plan Title")]
+    public string GetTestPlanTitle()
+    {
+        return _plansPage.GetTestPlanTitle();
     }
 }

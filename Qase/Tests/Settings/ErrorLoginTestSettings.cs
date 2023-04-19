@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using Qase.DriverConfiguration;
-using Qase.Pages.QasePages;
 using Qase.Steps;
 
 namespace Qase.Tests.Settings;
@@ -9,9 +8,7 @@ public abstract class ErrorLoginTestSettings
 {
     private static IWebDriver WebDriver { get; set; }
 
-    protected LoginPage LoginPage { get; private set; }
-
-    protected LoginPageSteps LoginPageSteps { get; private set; }
+    protected LoginPageSteps LoginPageSteps;
 
     [SetUp]
     public void SetUp()
@@ -19,8 +16,7 @@ public abstract class ErrorLoginTestSettings
         WebDriver = new WebDriverFactory().GetDriver();
         WebDriver.Manage().Window.Maximize();
         WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-
-        LoginPage = new LoginPage(WebDriver);
+        
         LoginPageSteps = new LoginPageSteps(WebDriver);
     }
 

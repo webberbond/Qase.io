@@ -8,7 +8,6 @@ namespace Qase.Tests.UI;
 public class DefectsTest : DefectsTestSettings
 {
     [Test]
-    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Defects Test With Validations")]
     [AllureLink("Create Defect", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1673022051")]
@@ -18,6 +17,6 @@ public class DefectsTest : DefectsTestSettings
             .OpenDefectsPage()
             .CreateNewDefect(DefectsModel);
         
-        Assert.That(DefectsPage.GetDefectTitle(), Is.EqualTo(DefectsModel.DefectTitle), "Checking if alert text is correct after creating a test defect.");
+        Assert.That(DefectsPageSteps.GetDefectTitle(), Is.EqualTo(DefectsModel.DefectTitle), "Checking if alert text is correct after creating a test defect.");
     }
 }

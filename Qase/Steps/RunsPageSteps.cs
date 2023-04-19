@@ -7,20 +7,18 @@ namespace Qase.Steps;
 
 public class RunsPageSteps
 {
-    private IWebDriver WebDriver { get; }
+    private readonly RunsPage _runsPage;
     
     public RunsPageSteps(IWebDriver webDriver) 
     {
-        WebDriver = webDriver;
+        _runsPage = new RunsPage(webDriver);
     }
-    
-    private RunsPage RunsPage => new(WebDriver);
-    
+
     [AllureStep("Create New Test Run")]
     public RunsPageSteps CreateNewTestRun()
     {
-        RunsPage.OpenTestRunsPage();
-        RunsPage.StartNewTestRun();
+        _runsPage.OpenTestRunsPage();
+        _runsPage.StartNewTestRun();
         
         return this;
     }
@@ -28,7 +26,7 @@ public class RunsPageSteps
     [AllureStep("Input Data")]
     public RunsPageSteps InputInformation(TestRunsModel testRun)
     {
-        RunsPage
+        _runsPage
             .InputTestRunDescription(testRun.Description);
 
         return this;
@@ -37,7 +35,7 @@ public class RunsPageSteps
     [AllureStep("Add Tests From Repository")]
     public RunsPageSteps AddTestsFromRepository()
     {
-        RunsPage
+        _runsPage
             .AddTestsFromRepository()
             .TestCaseButtonClick()
             .TestCaseCheckBoxClick()
@@ -49,7 +47,7 @@ public class RunsPageSteps
     [AllureStep("Start Test Run")]
     public RunsPageSteps StartTestRun()
     {
-        RunsPage.StartRunButtonClick();
+        _runsPage.StartRunButtonClick();
         
         return this;
     }
@@ -57,10 +55,16 @@ public class RunsPageSteps
     [AllureStep("Complete Test Run")]
     public RunsPageSteps CompleteTestRun()
     {
-        RunsPage
+        _runsPage
             .CompleteRunButtonClick()
             .CompleteConfirmButtonClick();
         
         return this;
+    }
+    
+    [AllureStep("Check if button is displayed")]
+    public bool CheckIfButtonIsDisplayed()
+    {
+       return _runsPage.IsShareReportButtonDisplayed();
     }
 }

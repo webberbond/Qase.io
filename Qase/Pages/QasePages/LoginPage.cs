@@ -7,55 +7,50 @@ public class LoginPage : BasePage
 {
     public LoginPage(IWebDriver webDriver) : base(webDriver)
     {
-        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//a[@class='logo']");
 
     protected override string UrlPath => "/login";
-
-    [FindsBy(How = How.CssSelector, Using = "#inputEmail")]
-    private IWebElement _emailInputField;
-
-    [FindsBy(How = How.CssSelector, Using = "#inputPassword")]
-    private IWebElement _passwordInputField;
-
-    [FindsBy(How = How.CssSelector, Using = "#btnLogin")]
-    private IWebElement _submitButton;
-
-    [FindsBy(How = How.CssSelector, Using = ".form-control-feedback")]
-    private IWebElement _errorMessageField;
+    
+    private IWebElement EmailInputField => WebDriver.FindElement(By.CssSelector("#inputEmail"));
+    
+    private IWebElement PasswordInputField => WebDriver.FindElement(By.CssSelector("#inputPassword"));
+    
+    private IWebElement SubmitButton => WebDriver.FindElement(By.CssSelector("#btnLogin"));
+    
+    private IWebElement ErrorMessageField => WebDriver.FindElement(By.CssSelector(".form-control-feedback"));
 
     public LoginPage InputEmail(string email)
     {
-        _emailInputField.Clear();
-        _emailInputField.SendKeys(email);
+        EmailInputField.Clear();
+        EmailInputField.SendKeys(email);
 
         return this;
     }
     
     public LoginPage InputPassword(string password)
     {
-        _passwordInputField.Clear();
-        _passwordInputField.SendKeys(password);
+        PasswordInputField.Clear();
+        PasswordInputField.SendKeys(password);
 
         return this;
     }
     
-    public LoginPage SubmitButton()
+    public LoginPage SubmitButtonClick()
     {
-        _submitButton.Click();
+        SubmitButton.Click();
 
         return this;
     }
     
     public bool ErrorMessageDisplayed()
     {
-        return _errorMessageField.Displayed;
+        return ErrorMessageField.Displayed;
     }
     
     public string ErrorMessageText()
     {
-        return _errorMessageField.Text;
+        return ErrorMessageField.Text;
     }
 }

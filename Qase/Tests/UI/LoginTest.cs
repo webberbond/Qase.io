@@ -9,7 +9,6 @@ namespace Qase.Tests.UI;
 public class LoginTest : ErrorLoginTestSettings
 {
     [Test]
-    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Error Login Test With Validations")]
     [AllureLink("Error Login", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=233756267")]
@@ -19,6 +18,6 @@ public class LoginTest : ErrorLoginTestSettings
             .OpenPage()
             .UserLogin(Authentication.FakeUser().Email, Authentication.FakeUser().Password);
         
-        Assert.That(LoginPage.ErrorMessageText(), Is.EqualTo("These credentials do not match our records."), "Checking error message's text if credentials are wrong");
+        Assert.That(LoginPageSteps.GetErrorMessage(), Is.EqualTo("These credentials do not match our records."), "Checking error message's text if credentials are wrong");
     }
 }

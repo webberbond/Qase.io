@@ -7,7 +7,7 @@ namespace Qase.Pages;
 
 public abstract class BasePage
 {
-    private IWebDriver WebDriver { get; }
+    protected IWebDriver WebDriver { get; }
 
     protected BasePage(IWebDriver webDriver)
     {

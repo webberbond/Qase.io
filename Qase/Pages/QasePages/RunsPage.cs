@@ -7,126 +7,113 @@ public class RunsPage : BasePage
 {
     public RunsPage(IWebDriver webDriver) : base(webDriver)
     {
-        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//h1[normalize-space()='Test runs']");
     
     protected override string UrlPath => string.Empty;
-    
-    [FindsBy(How = How.CssSelector, Using = "a[title='Test Runs']")]
-    private IWebElement _testRunsButton;
 
-    [FindsBy(How = How.CssSelector, Using = "div[class='d-flex mt-3'] span[class='ZwgkIF']")]
-    private IWebElement _startNewTestRunButton;
+    private IWebElement TestRunsButton => WebDriver.FindElement(By.CssSelector("a[title='Test Runs']"));
 
-    [FindsBy(How = How.XPath, Using = "//input[@id='description']")]
-    private IWebElement _testRunDescriptionField;
+    private IWebElement StartNewTestRunButton => WebDriver.FindElement(By.CssSelector("div[class='d-flex mt-3'] span[class='ZwgkIF']"));
+
+    private IWebElement TestRunDescriptionField => WebDriver.FindElement(By.XPath("//input[@id='description']"));
+
+    private IWebElement AddTestsFromRepositoryButton => WebDriver.FindElement(By.XPath("//button[normalize-space()='Add/modify tests from repository']"));
     
-    [FindsBy(How = How.XPath, Using = "//button[normalize-space()='Add/modify tests from repository']")]
-    private IWebElement _addTestsFromRepositoryButton;
+    private IWebElement TestCaseButton => WebDriver.FindElement(By.CssSelector("div[id='suite-0'] p[class='suite-title']"));
+
+    private IWebElement TestCaseCheckBox => WebDriver.FindElement(By.CssSelector("div[id='suitecase-1-checkbox'] span[class='custom-control-indicator']"));
+
+    private IWebElement DoneButton => WebDriver.FindElement(By.XPath("//span[normalize-space()='Done']"));
+
+    private IWebElement StartRunButton => WebDriver.FindElement(By.XPath("//span[normalize-space()='Start a run']"));
+
+    private IWebElement CompleteConfirmButton => WebDriver.FindElement(By.XPath("//span[normalize-space()='Complete']"));
+
+    private IWebElement CompleteRunButton => WebDriver.FindElement(By.CssSelector("#complete-run-button"));
+
+    private IWebElement ShareReportButton => WebDriver.FindElement(By.CssSelector("#share-report-button"));
     
-    [FindsBy(How = How.CssSelector, Using = "div[id='suite-0'] p[class='suite-title']")]
-    private IWebElement _testCaseButton;
-    
-    [FindsBy(How = How.CssSelector, Using = "div[id='suitecase-1-checkbox'] span[class='custom-control-indicator']")]
-    private IWebElement _testCaseCheckBox;
-    
-    [FindsBy(How = How.XPath, Using = "//span[normalize-space()='Done']")]
-    private IWebElement _doneButton;
-    
-    [FindsBy(How = How.XPath, Using = "//span[normalize-space()='Start a run']")]
-    private IWebElement _startRunButton;
-    
-    [FindsBy(How = How.XPath, Using = "//span[normalize-space()='Complete']")]
-    private IWebElement _completeConfirmButton;
-    
-    [FindsBy(How = How.CssSelector, Using = "#complete-run-button")]
-    private IWebElement _completeRunButton;
-    
-    [FindsBy(How = How.CssSelector, Using = "#share-report-button")]
-    private IWebElement _shareReportButton;
-    
-    [FindsBy(How = How.XPath, Using = "//button[normalize-space()='Run again']")]
-    private IWebElement _runAgainButton;
+    private IWebElement RunAgainButton => WebDriver.FindElement(By.XPath("//button[normalize-space()='Run again']"));
     
     public RunsPage OpenTestRunsPage()
     {
-        _testRunsButton.Click();
+        TestRunsButton.Click();
 
         return this;
     }
     
     public RunsPage StartNewTestRun()
     {
-        _startNewTestRunButton.Click();
+        StartNewTestRunButton.Click();
 
         return this;
     }
     
     public RunsPage InputTestRunDescription(string testRunDescription)
     {
-        _testRunDescriptionField.SendKeys(testRunDescription);
+        TestRunDescriptionField.SendKeys(testRunDescription);
 
         return this;
     }
     
     public RunsPage AddTestsFromRepository()
     {
-        _addTestsFromRepositoryButton.Click();
+        AddTestsFromRepositoryButton.Click();
 
         return this;
     }
 
     public RunsPage TestCaseButtonClick()
     {
-        _testCaseButton.Click();
+        TestCaseButton.Click();
         
         return this;
     }
     
     public RunsPage TestCaseCheckBoxClick()
     {
-        _testCaseCheckBox.Click();
+        TestCaseCheckBox.Click();
         
         return this;
     }
     
     public RunsPage DoneButtonClick()
     {
-        _doneButton.Click();
+        DoneButton.Click();
         
         return this;
     }
     
     public RunsPage StartRunButtonClick()
     {
-        _startRunButton.Click();
+        StartRunButton.Click();
         
         return this;
     }
 
     public bool IsShareReportButtonDisplayed()
     {
-       return _shareReportButton.Displayed;
+       return ShareReportButton.Displayed;
     }
 
     public RunsPage CompleteRunButtonClick()
     {
-        _completeRunButton.Click();
+        CompleteRunButton.Click();
         
         return this;
     }
     
     public RunsPage CompleteConfirmButtonClick()
     {
-        _completeConfirmButton.Click();
+        CompleteConfirmButton.Click();
         
         return this;
     }
 
     public bool IsRunAgainButtonDisplayed()
     {
-        return _runAgainButton.Displayed;
+        return RunAgainButton.Displayed;
     }
 }

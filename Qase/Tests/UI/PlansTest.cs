@@ -8,7 +8,6 @@ namespace Qase.Tests.UI;
 public class PlansTest : PlansTestSettings
 {
     [Test]
-    [Parallelizable]
     [AllureOwner("Sergey Zarochentsev")]
     [AllureSuite("Successful Plans Test With Validations")]
     [AllureLink("Create Test Plan", "https://docs.google.com/spreadsheets/d/1C6DB7e3HMbSTp_GdMgxpdQGjAPl5_Kvc7mhINjfuhyg/edit#gid=1547098580")]
@@ -20,6 +19,6 @@ public class PlansTest : PlansTestSettings
             .AddTestCases()
             .SaveTestPlan();
         
-        Assert.That(PlansPage.GetTestPlanTitle(), Is.EqualTo(TestPlanModel.PlanTitle), "Checking if alert text is correct after creating a test plan.");
+        Assert.That(PlansPageSteps.GetTestPlanTitle(), Is.EqualTo(TestPlanModel.PlanTitle), "Checking if alert text is correct after creating a test plan.");
     }
 }

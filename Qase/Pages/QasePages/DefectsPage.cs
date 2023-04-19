@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using SeleniumExtras.PageObjects;
 
 namespace Qase.Pages.QasePages;
 
@@ -7,69 +6,62 @@ public class DefectsPage : BasePage
 {
     public DefectsPage(IWebDriver webDriver) : base(webDriver)
     {
-        PageFactory.InitElements(webDriver, this);
     }
 
     protected override By UniqueWebLocator => By.XPath("//h1[normalize-space()='Defects']");
+    
     protected override string UrlPath => string.Empty;
     
-    [FindsBy(How = How.XPath, Using = "//a[@id='defect-1-title']")]
-    private IWebElement _defectTitle;
+    private IWebElement DefectTitle => WebDriver.FindElement(By.XPath("//a[@id='defect-1-title']"));
     
-    [FindsBy(How = How.CssSelector, Using = "[role='alert']")]
-    private IWebElement _alert;
+    private IWebElement Alert => WebDriver.FindElement(By.CssSelector("[role='alert']"));
     
-    [FindsBy(How = How.CssSelector, Using = "button[type='submit']")]
-    private IWebElement _createDefectButton;
-
-    [FindsBy(How = How.CssSelector, Using = ".btn.btn-primary")]
-    private IWebElement _createNewDefectButton;
+    private IWebElement CreateDefectButton => WebDriver.FindElement(By.CssSelector("button[type='submit']"));
     
-    [FindsBy(How = How.XPath, Using = "//input[@id='title']")]
-    private IWebElement _defectTitleInputField;
+    private IWebElement CreateNewDefectButton => WebDriver.FindElement(By.CssSelector(".btn.btn-primary"));
     
-    [FindsBy(How = How.XPath, Using = "//input[@id='actual_result']")]
-    private IWebElement _defectActualResultInputField;
+    private IWebElement DefectTitleInputField => WebDriver.FindElement(By.XPath("//input[@id='title']"));
     
-    [FindsBy(How = How.CssSelector, Using = "a[title='Defects']")]
-    private IWebElement _defectsButton;
+    private IWebElement DefectActualResultInputField => WebDriver.FindElement(By.XPath("//input[@id='actual_result']"));
+    
+    private IWebElement DefectsButton => WebDriver.FindElement(By.CssSelector("a[title='Defects']"));
 
     public DefectsPage CreateNewDefect()
     {
-        _defectsButton.Click();
-        _createNewDefectButton.Click();
+        DefectsButton.Click();
+        CreateNewDefectButton.Click();
         
         return this;
     }
     
     public DefectsPage InputDefectTitle(string defectTitle)
     {
-        _defectTitleInputField.SendKeys(defectTitle);
+        DefectTitleInputField.SendKeys(defectTitle);
         
         return this;
     }
     
     public DefectsPage InputDefectActualResult(string defectActualResult)
     {
-        _defectActualResultInputField.SendKeys(defectActualResult);
+        DefectActualResultInputField.SendKeys(defectActualResult);
         
         return this;
     }
     
     public DefectsPage CreateDefect()
     {
-        _createDefectButton.Click();
+        CreateDefectButton.Click();
         
         return this;
     }
 
     public string GetAlertText()
     {
-        return _alert.Text;
+        return Alert.Text;
     }
     
     public string GetDefectTitle()
     {
-        return _defectTitle.Text;
+        return DefectTitle.Text;
     }
 }   

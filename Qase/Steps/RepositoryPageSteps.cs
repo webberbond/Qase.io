@@ -7,19 +7,17 @@ namespace Qase.Steps;
 
 public class RepositoryPageSteps
 {
-    private IWebDriver WebDriver { get; }
+    private readonly RepositoryPage _repositoryPage;
     
     public RepositoryPageSteps(IWebDriver webDriver) 
     {
-        WebDriver = webDriver;
+        _repositoryPage = new RepositoryPage(webDriver);
     }
-    
-    private RepositoryPage RepositoryPage => new(WebDriver);
 
     [AllureStep("Create New Test Case")]
     public RepositoryPageSteps CreateNewTestCase()
     {
-        RepositoryPage.CreateNewTestCase();
+        _repositoryPage.CreateNewTestCase();
 
         return this;
     }
@@ -27,7 +25,7 @@ public class RepositoryPageSteps
     [AllureStep("Input Data")]
     public RepositoryPageSteps InputInformation(TestCaseModel testCase)
     {
-        RepositoryPage
+        _repositoryPage
             .InputTitle(testCase.Title)
             .InputDescription(testCase.Description)
             .InputPreConditions(testCase.PreConditions)
@@ -39,8 +37,14 @@ public class RepositoryPageSteps
     [AllureStep("Save Test Case")]
     public RepositoryPageSteps ClickSaveTestCaseButton()
     {
-        RepositoryPage.ClickSaveTestCaseButton();
+        _repositoryPage.ClickSaveTestCaseButton();
         
         return this;
+    }
+    
+    [AllureStep("Get Alert Text")]
+    public string GetAlertText()
+    {
+        return _repositoryPage.GetAlertText();
     }
 }
