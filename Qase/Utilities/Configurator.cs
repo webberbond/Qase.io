@@ -9,7 +9,7 @@ public abstract class Configurator
     public static readonly ChromeOptions Settings;
     public static readonly string? BaseUrl;
     public static readonly Browser Browser;
-
+    
     static Configurator()
     {
         IConfiguration config = new ConfigurationBuilder()

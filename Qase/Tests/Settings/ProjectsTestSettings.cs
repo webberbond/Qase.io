@@ -7,18 +7,18 @@ namespace Qase.Tests.Settings;
 
 public abstract class ProjectsTestSettings : LoginTestSettings
 {
-    protected readonly TestProjectModel TestProjectModel = new TestProjectModelDataFaker().Generate();
+    private readonly TestProjectModel _testProjectModel = new TestProjectModelDataFaker().Generate();
 
-    protected ProjectsPageSteps ProjectsPageSteps;
+    private ProjectsPageSteps _projectsPageSteps;
 
     [SetUp]
     public new void SetUp()
     {
-        ProjectsPageSteps = new ProjectsPageSteps(WebDriver);
+        _projectsPageSteps = new ProjectsPageSteps(WebDriver);
 
-        ProjectsPageSteps
+        _projectsPageSteps
             .CreateNewProject()
-            .InputInformation(TestProjectModel)
+            .InputInformation(_testProjectModel)
             .ClickSubmitButton();
     }
     
@@ -27,19 +27,19 @@ public abstract class ProjectsTestSettings : LoginTestSettings
     {
         ScreenShotter.TakeScreenshot();
         
-        ProjectsPageSteps
+        _projectsPageSteps
             .OpenProjectSettings();
         
         var finishModel = new TestProjectModel
         {
-            ProjectName = ProjectsPageSteps.GetProjectName(),
-            ProjectCode = ProjectsPageSteps.GetProjectCode(),
-            ProjectDescription = ProjectsPageSteps.GetProjectDescription()
+            ProjectName = _projectsPageSteps.GetProjectName(),
+            ProjectCode = _projectsPageSteps.GetProjectCode(),
+            ProjectDescription = _projectsPageSteps.GetProjectDescription()
         };
         
-        Assert.That(finishModel, Is.EqualTo(TestProjectModel), "Comparing actual project data with generated");
+        Assert.That(finishModel, Is.EqualTo(_testProjectModel), "Comparing actual project data with generated");
         
-        ProjectsPageSteps
+        _projectsPageSteps
             .DeleteProject();
         
         WebDriver.Quit();

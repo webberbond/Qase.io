@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using Qase.Utilities;
-using SeleniumExtras.WaitHelpers;
 
 namespace Qase.Pages;
 

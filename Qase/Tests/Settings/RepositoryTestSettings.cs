@@ -8,7 +8,7 @@ public class RepositoryTestSettings : ProjectsTestSettings
 {
     private readonly TestCaseModel _testCaseModel = new TestCaseModelDataFaker().Generate();
 
-    protected RepositoryPageSteps RepositoryPageSteps;
+    private RepositoryPageSteps RepositoryPageSteps;
 
     [SetUp]
     public new void SetUp()
@@ -20,6 +20,6 @@ public class RepositoryTestSettings : ProjectsTestSettings
             .InputInformation(_testCaseModel)
             .ClickSaveTestCaseButton();
         
-        Assert.That(ProjectsPageSteps.GetProjectTitle(), Does.Contain(TestProjectModel.ProjectCode), "Getting actual project title and compare it to generated");
+        Assert.That(RepositoryPageSteps.GetAlertText(), Is.EqualTo("Test case was created successfully!"), "Checking if alert text is correct after creating a test case.");
     }
 }

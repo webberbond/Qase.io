@@ -6,7 +6,7 @@ namespace Qase.Tests.Settings;
 
 public abstract class ErrorLoginTestSettings
 {
-    private static IWebDriver WebDriver { get; set; }
+    private IWebDriver WebDriver { get; set; }
 
     protected LoginPageSteps LoginPageSteps;
 
