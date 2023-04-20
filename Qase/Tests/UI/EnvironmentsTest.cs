@@ -9,7 +9,7 @@ public class EnvironmentsTest : EnvironmentTestSettings
 {
     [Test]
     [AllureOwner("Sergey Zarochentsev")]
-    [AllureSuite("Error Login Test With Validations")]
+    [AllureSuite("Test Environment Creation")]
     public void EnvironmentCreationTest()
     {
         EnvironmentsPageSteps
