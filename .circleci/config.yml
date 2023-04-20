@@ -37,14 +37,3 @@ workflows:
   commit:
     jobs:
       - build
-  periodical:
-    triggers:
-      - schedule:
-          cron: "1 4,8,12 * * *"
-          filters:
-            branches:
-              only: 
-                - QaseProject
-    
-    jobs:
-      - build
