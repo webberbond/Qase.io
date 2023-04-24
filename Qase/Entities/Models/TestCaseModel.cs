@@ -1,12 +1,14 @@
-﻿namespace Qase.Entities.Models;
+﻿using Newtonsoft.Json;
+
+namespace Qase.Entities.Models;
 
 public class TestCaseModel
 {
-    public string Title { get; set; }
+    [JsonProperty("title")] public string Title { get; set; }
 
-    public string Description { get; set; }
+    [JsonProperty("description")] public string Description { get; set; }
 
-    public string PreConditions { get; set; }
+    [JsonProperty("preconditions")] public string PreConditions { get; set; }
 
-    public string PostConditions { get; set; }
+    [JsonProperty("postconditions")] public string PostConditions { get; set; }
 }

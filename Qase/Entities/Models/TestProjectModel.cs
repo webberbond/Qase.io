@@ -1,10 +1,15 @@
-﻿namespace Qase.Entities.Models;
+﻿using Newtonsoft.Json;
+
+namespace Qase.Entities.Models;
 
 public class TestProjectModel
 {
-    public string ProjectName { get; set; }
-    public string ProjectCode { get; set; }
-    public string ProjectDescription { get; set; }
+    [JsonProperty("title")] public string ProjectName { get; set; }
+    
+    [JsonProperty("code")] public string ProjectCode { get; set; }
+    
+    [JsonProperty("description")] public string ProjectDescription { get; set; }
+    
 
     public override bool Equals(object? obj)
     {

@@ -3,7 +3,7 @@ using Qase.DriverConfiguration;
 using Qase.Entities.TestData;
 using Qase.Steps;
 
-namespace Qase.Tests.Settings;
+namespace Qase.Tests.UISettings;
 
 public abstract class LoginTestSettings
 {

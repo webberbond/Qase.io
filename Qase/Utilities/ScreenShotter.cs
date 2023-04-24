@@ -1,6 +1,6 @@
 ﻿using Allure.Net.Commons;
 using OpenQA.Selenium.Support.Extensions;
-using Qase.Tests.Settings;
+using Qase.Tests.UISettings;
 
 namespace Qase.Utilities;
 

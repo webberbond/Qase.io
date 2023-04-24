@@ -2,7 +2,7 @@
 using Qase.Entities.Models;
 using Qase.Steps;
 
-namespace Qase.Tests.Settings;
+namespace Qase.Tests.UISettings;
 
 public abstract class EnvironmentTestSettings : ProjectsTestSettings
 {

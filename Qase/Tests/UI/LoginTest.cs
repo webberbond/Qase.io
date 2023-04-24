@@ -1,7 +1,7 @@
 ﻿using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using Qase.Entities.TestData;
-using Qase.Tests.Settings;
+using Qase.Tests.UISettings;
 
 namespace Qase.Tests.UI;
 

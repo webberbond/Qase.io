@@ -3,7 +3,7 @@ using Qase.Entities.Models;
 using Qase.Steps;
 using Qase.Utilities;
 
-namespace Qase.Tests.Settings;
+namespace Qase.Tests.UISettings;
 
 public abstract class ProjectsTestSettings : LoginTestSettings
 {
