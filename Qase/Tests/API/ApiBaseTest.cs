@@ -1,40 +1,41 @@
 ﻿using Qase.Services;
+using Qase.Services.QaseServices;
 using RestSharp;
 
 namespace Qase.Tests.API;
 
-public class ApiBaseTest
+public class ApiBaseTest : BaseService
 {
     private RestClient _restClient;
 
-    private TestProjectService TestProjectService { get; set; }
+    protected TestProjectService TestProjectService;
 
-    private TestCaseService TestCaseService { get; set; }
+    protected TestCaseService TestCaseService;
 
-    private TestDefectService TestDefectService { get; set; }
+    protected TestDefectService TestDefectService;
 
-    private TestEnvironmentService TestEnvironmentService { get; set; }
+    protected TestEnvironmentService TestEnvironmentService;
 
-    private TestPlanService TestPlanService { get; set; }
+    protected TestPlanService TestPlanService;
 
-    private TestRunService TestRunService { get; set; }
+    protected TestRunService TestRunService;
 
     [OneTimeSetUp]
     public void SetUpClient()
     {
         _restClient = new RestClient();
 
-        TestProjectService = new TestProjectService(_restClient);
+        TestProjectService = new TestProjectService();
         
-        TestCaseService = new TestCaseService(_restClient);
+        TestCaseService = new TestCaseService();
         
-        TestDefectService = new TestDefectService(_restClient);
+        TestDefectService = new TestDefectService();
         
-        TestEnvironmentService = new TestEnvironmentService(_restClient);
+        TestEnvironmentService = new TestEnvironmentService();
         
-        TestPlanService = new TestPlanService(_restClient);
+        TestPlanService = new TestPlanService();
         
-        TestRunService = new TestRunService(_restClient);
+        TestRunService = new TestRunService();
     }
 
     [OneTimeTearDown]

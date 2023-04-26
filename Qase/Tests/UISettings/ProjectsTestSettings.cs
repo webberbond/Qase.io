@@ -34,7 +34,6 @@ public abstract class ProjectsTestSettings : LoginTestSettings
         {
             ProjectName = _projectsPageSteps.GetProjectName(),
             ProjectCode = _projectsPageSteps.GetProjectCode(),
-            ProjectDescription = _projectsPageSteps.GetProjectDescription()
         };
         
         Assert.That(finishModel, Is.EqualTo(_testProjectModel), "Comparing actual project data with generated");

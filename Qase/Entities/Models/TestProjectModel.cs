@@ -7,9 +7,6 @@ public class TestProjectModel
     [JsonProperty("title")] public string ProjectName { get; set; }
     
     [JsonProperty("code")] public string ProjectCode { get; set; }
-    
-    [JsonProperty("description")] public string ProjectDescription { get; set; }
-    
 
     public override bool Equals(object? obj)
     {
@@ -21,17 +18,16 @@ public class TestProjectModel
         var other = (TestProjectModel)obj;
 
         return ProjectName == other.ProjectName &&
-               ProjectCode == other.ProjectCode &&
-               ProjectDescription == other.ProjectDescription;
+               ProjectCode == other.ProjectCode;
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(ProjectName, ProjectCode, ProjectDescription);
+        return HashCode.Combine(ProjectName, ProjectCode);
     }
 
     public override string ToString()
     {
-        return $"TestProjectModel: ProjectName='{ProjectName}', ProjectCode='{ProjectCode}', ProjectDescription='{ProjectDescription}'";
+        return $"TestProjectModel: ProjectName='{ProjectName}', ProjectCode='{ProjectCode}''";
     }
 }

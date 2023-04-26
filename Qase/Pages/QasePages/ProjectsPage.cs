@@ -56,15 +56,9 @@ public class ProjectsPage : BasePage
         ProjectCodeInputField.Clear();
         ProjectCodeInputField.Clear();
         ProjectCodeInputField.Clear();
+        ProjectCodeInputField.Clear();
+        ProjectCodeInputField.Clear();
         ProjectCodeInputField.SendKeys(projectCode);
-
-        return this;
-    }
-    
-    public ProjectsPage InputProjectDescription(string projectDescription)
-    {
-        ProjectDescriptionInputField.Clear();
-        ProjectDescriptionInputField.SendKeys(projectDescription);
 
         return this;
     }

@@ -9,8 +9,7 @@ public static class TestProjectData
         return new TestProjectModel
         {
             ProjectName = "TestProject",
-            ProjectCode = "ewewe",
-            ProjectDescription = "TestProjectDescription"
+            ProjectCode = "ewewe"
         };
     }
 }

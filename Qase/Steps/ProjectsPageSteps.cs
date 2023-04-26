@@ -26,8 +26,7 @@ public class ProjectsPageSteps
     {
         _projectsPage
             .InputProjectName(testProject.ProjectName)
-            .InputProjectCode(testProject.ProjectCode)
-            .InputProjectDescription(testProject.ProjectDescription);
+            .InputProjectCode(testProject.ProjectCode);
 
         return this;
     }
