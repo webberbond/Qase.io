@@ -1,9 +1,11 @@
 ﻿using System.Net;
 using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
 using Qase.Tests.APISettings;
 
 namespace Qase.Tests.API.Qase;
 
+[AllureNUnit]
 public class PlansTestAPI : ProjectsSettingsAPI
 {
     [Test]
