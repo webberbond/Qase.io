@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "status",
+    "result"
+  ],
+  "properties": {
+    "status": {
+      "type": "boolean",
+      "default": false,
+      "title": "The status Schema",
+      "examples": [
+        true
+      ]
+    },
+    "result": {
+      "type": "object",
+      "default": {},
+      "title": "The result Schema",
+      "required": [
+        "id",
+        "title",
+        "description",
+        "status",
+        "status_text",
+        "start_time",
+        "end_time",
+        "public",
+        "stats",
+        "time_spent",
+        "user_id",
+        "environment",
+        "milestone",
+        "custom_fields",
+        "tags"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "default": 0,
+          "title": "The id Schema",
+          "examples": [
+            1
+          ]
+        },
+        "title": {
+          "type": "string",
+          "default": "",
+          "title": "The title Schema",
+          "examples": [
+            "morris.info"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "default": "",
+          "title": "The description Schema",
+          "examples": [
+            "autem"
+          ]
+        },
+        "status": {
+          "type": "integer",
+          "default": 0,
+          "title": "The status Schema",
+          "examples": [
+            0
+          ]
+        },
+        "status_text": {
+          "type": "string",
+          "default": "",
+          "title": "The status_text Schema",
+          "examples": [
+            "active"
+          ]
+        },
+        "start_time": {
+          "type": "string",
+          "default": "",
+          "title": "The start_time Schema",
+          "examples": [
+            "2023-04-22T18:19:25+00:00"
+          ]
+        },
+        "end_time": {
+          "type": "null",
+          "default": null,
+          "title": "The end_time Schema",
+          "examples": [
+            null
+          ]
+        },
+        "public": {
+          "type": "boolean",
+          "default": false,
+          "title": "The public Schema",
+          "examples": [
+            false
+          ]
+        },
+        "stats": {
+          "type": "object",
+          "default": {},
+          "title": "The stats Schema",
+          "required": [
+            "total",
+            "untested",
+            "passed",
+            "failed",
+            "blocked",
+            "skipped",
+            "retest",
+            "in_progress",
+            "invalid"
+          ],
+          "properties": {
+            "total": {
+              "type": "integer",
+              "default": 0,
+              "title": "The total Schema",
+              "examples": [
+                0
+              ]
+            },
+            "untested": {
+              "type": "integer",
+              "default": 0,
+              "title": "The untested Schema",
+              "examples": [
+                0
+              ]
+            },
+            "passed": {
+              "type": "integer",
+              "default": 0,
+              "title": "The passed Schema",
+              "examples": [
+                0
+              ]
+            },
+            "failed": {
+              "type": "integer",
+              "default": 0,
+              "title": "The failed Schema",
+              "examples": [
+                0
+              ]
+            },
+            "blocked": {
+              "type": "integer",
+              "default": 0,
+              "title": "The blocked Schema",
+              "examples": [
+                0
+              ]
+            },
+            "skipped": {
+              "type": "integer",
+              "default": 0,
+              "title": "The skipped Schema",
+              "examples": [
+                0
+              ]
+            },
+            "retest": {
+              "type": "integer",
+              "default": 0,
+              "title": "The retest Schema",
+              "examples": [
+                0
+              ]
+            },
+            "in_progress": {
+              "type": "integer",
+              "default": 0,
+              "title": "The in_progress Schema",
+              "examples": [
+                0
+              ]
+            },
+            "invalid": {
+              "type": "integer",
+              "default": 0,
+              "title": "The invalid Schema",
+              "examples": [
+                0
+              ]
+            }
+          },
+          "examples": [{
+            "total": 0,
+            "untested": 0,
+            "passed": 0,
+            "failed": 0,
+            "blocked": 0,
+            "skipped": 0,
+            "retest": 0,
+            "in_progress": 0,
+            "invalid": 0
+          }]
+        },
+        "time_spent": {
+          "type": "integer",
+          "default": 0,
+          "title": "The time_spent Schema",
+          "examples": [
+            0
+          ]
+        },
+        "user_id": {
+          "type": "integer",
+          "default": 0,
+          "title": "The user_id Schema",
+          "examples": [
+            1
+          ]
+        },
+        "environment": {
+          "type": "null",
+          "default": null,
+          "title": "The environment Schema",
+          "examples": [
+            null
+          ]
+        },
+        "milestone": {
+          "type": "null",
+          "default": null,
+          "title": "The milestone Schema",
+          "examples": [
+            null
+          ]
+        },
+        "custom_fields": {
+          "type": "array",
+          "default": [],
+          "title": "The custom_fields Schema",
+          "items": {},
+          "examples": [
+            []
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "default": [],
+          "title": "The tags Schema",
+          "items": {},
+          "examples": [
+            []
+          ]
+        }
+      },
+      "examples": [{
+        "id": 1,
+        "title": "morris.info",
+        "description": "autem",
+        "status": 0,
+        "status_text": "active",
+        "start_time": "2023-04-22T18:19:25+00:00",
+        "end_time": null,
+        "public": false,
+        "stats": {
+          "total": 0,
+          "untested": 0,
+          "passed": 0,
+          "failed": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "retest": 0,
+          "in_progress": 0,
+          "invalid": 0
+        },
+        "time_spent": 0,
+        "user_id": 1,
+        "environment": null,
+        "milestone": null,
+        "custom_fields": [],
+        "tags": []
+      }]
+    }
+  },
+  "examples": [{
+    "status": true,
+    "result": {
+      "id": 1,
+      "title": "morris.info",
+      "description": "autem",
+      "status": 0,
+      "status_text": "active",
+      "start_time": "2023-04-22T18:19:25+00:00",
+      "end_time": null,
+      "public": false,
+      "stats": {
+        "total": 0,
+        "untested": 0,
+        "passed": 0,
+        "failed": 0,
+        "blocked": 0,
+        "skipped": 0,
+        "retest": 0,
+        "in_progress": 0,
+        "invalid": 0
+      },
+      "time_spent": 0,
+      "user_id": 1,
+      "environment": null,
+      "milestone": null,
+      "custom_fields": [],
+      "tags": []
+    }
+  }]
+}

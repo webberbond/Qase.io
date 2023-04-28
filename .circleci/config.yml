@@ -1,0 +1,39 @@
+version: 2.1
+
+orbs:
+  win: circleci/windows@5.0
+
+jobs:
+  build:
+    executor: win/default
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: 'Install Chrome'
+          command: |
+            choco install googlechrome -y
+      - run:
+          name: 'Build Stage'
+          command: |
+            dotnet build
+      - run:
+          name: 'Test Stage'
+          command: |
+            dotnet test
+      - run:
+          name: 'Install Allure And Generate Allure Report'
+          command: |
+            iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+            scoop install allure
+            echo Allure version: $(allure --version)
+            allure generate Qase/bin/Debug/net6.0/allure-results
+          when: always
+      - store_artifacts:
+          path: allure-report
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
