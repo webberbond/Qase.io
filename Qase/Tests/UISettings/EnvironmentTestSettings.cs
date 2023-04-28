@@ -4,7 +4,7 @@ using Qase.Steps;
 
 namespace Qase.Tests.UISettings;
 
-public abstract class EnvironmentTestSettings : ProjectsTestSettings
+public class EnvironmentTestSettings : ProjectsTestSettings
 {
     protected readonly TestEnvironmentModel TestEnvironmentModel = new TestEnvironmentModelDataFaker().Generate();
 

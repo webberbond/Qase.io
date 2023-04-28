@@ -6,7 +6,7 @@ namespace Qase.Utilities;
 
 public class SchemaValidator
 {
-    public static bool ValidateResponse(string jsonResponse, string jsonSchema)
+    public  bool ValidateResponse(string jsonResponse, string jsonSchema)
     {
         var schema = JSchema.Parse(jsonSchema);
         

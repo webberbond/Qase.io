@@ -5,23 +5,32 @@ using Qase.Steps;
 
 namespace Qase.Tests.UISettings;
 
-public abstract class LoginTestSettings
+public class LoginTestSettings
 {
-    protected static IWebDriver WebDriver { get; private set; }
+    protected IWebDriver WebDriver => _webDriver;
+
+    private IWebDriver _webDriver;
 
     private LoginPageSteps _loginPageSteps;
+    
+    private readonly Authentication _authentication;
+
+    public LoginTestSettings()
+    {
+        _authentication = new Authentication();
+    }
 
     [SetUp]
     public void SetUp()
     {
-        WebDriver = new WebDriverFactory().GetDriver();
-        WebDriver.Manage().Window.Maximize();
-        WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
+        _webDriver = new WebDriverFactory().GetDriver();
+        _webDriver.Manage().Window.Maximize();
+        _webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         
         _loginPageSteps = new LoginPageSteps(WebDriver);
 
         _loginPageSteps
             .OpenPage()
-            .UserLogin(Authentication.User().Email, Authentication.User().Password);
+            .UserLogin(_authentication.User().Email, _authentication.User().Password);
     }
 }

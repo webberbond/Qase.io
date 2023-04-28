@@ -16,7 +16,7 @@ public abstract class BasePage
     
     protected abstract By UniqueWebLocator { get; }
 
-    private readonly string? _baseUrl = Configurator.BaseUrl;
+    private readonly string? _baseUrl = new Configurator().BaseUrl;
     
     protected abstract string UrlPath { get; }
 

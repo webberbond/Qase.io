@@ -1,4 +1,5 @@
-﻿using Qase.Entities.Models;
+﻿using System.Net;
+using Qase.Entities.Models;
 using Qase.Entities.ResponseModels;
 using RestSharp;
 
@@ -6,7 +7,7 @@ namespace Qase.Services.QaseServices;
 
 public class TestProjectService : BaseService
 {
-    public async Task<RestResponse<TestProjectModel>> CreateProject(TestProjectModel testProjectModel)
+    public async Task<(RestResponse<TestProjectModel>,string)> CreateProject(TestProjectModel testProjectModel)
     { 
         var postRequest = new RestRequest("https://api.qase.io/v1/project", Method.Post)
             .AddJsonBody(new {
@@ -14,10 +15,12 @@ public class TestProjectService : BaseService
                 code = testProjectModel.ProjectCode
             });
         
-        return await RestClient.ExecuteAsync<TestProjectModel>(postRequest);
+        var createdProject = await RestClient.ExecuteAsync<TestProjectModel>(postRequest);
+
+        return (createdProject, createdProject.Content);
     }
     
-    public async Task GetProjectByCode(string projectCode)
+    public async Task<(HttpStatusCode, TestProjectModel, string)> GetProjectByCode(string projectCode)
     {
         var getRequest = new RestRequest($"https://api.qase.io/v1/project/{projectCode}");
         
@@ -28,8 +31,8 @@ public class TestProjectService : BaseService
             ProjectName = createdProject.Data.result.title,
             ProjectCode = createdProject.Data.result.code,
         };
-        
-        Assert.That(finishModel, Is.EqualTo(TestProjectModel), "Comparing actual project data with generated");
+
+        return (createdProject.StatusCode, finishModel, createdProject.Content);
     }
 
     public async Task<RestResponse<TestProjectModel>> DeleteProjectByCode(string projectCode)

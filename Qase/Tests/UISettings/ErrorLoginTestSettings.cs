@@ -4,7 +4,7 @@ using Qase.Steps;
 
 namespace Qase.Tests.UISettings;
 
-public abstract class ErrorLoginTestSettings
+public class ErrorLoginTestSettings
 {
     private IWebDriver WebDriver { get; set; }
 

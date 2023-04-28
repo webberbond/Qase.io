@@ -11,13 +11,13 @@ public class WebDriverFactory
     public IWebDriver GetDriver()
     {
         IWebDriver driver;
-
-        var browser = Configurator.Browser;
+        var configurator = new Configurator();
+        var browser = configurator.Browser;
 
         switch (browser)
         {
             case Browser.Chrome:
-                driver = new ChromeDriver(Configurator.Settings);
+                driver = new ChromeDriver(configurator.Settings);
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                 Logger.Instance.Debug(((WebDriver) driver).AuthenticatorId);
                 return driver;

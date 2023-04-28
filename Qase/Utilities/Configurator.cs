@@ -4,13 +4,13 @@ using Qase.DriverConfiguration;
 
 namespace Qase.Utilities;
 
-public abstract class Configurator
+public class Configurator
 {
-    public static readonly ChromeOptions Settings;
-    public static readonly string? BaseUrl;
-    public static readonly Browser Browser;
-    
-    static Configurator()
+    public readonly ChromeOptions Settings;
+    public readonly string? BaseUrl;
+    public readonly Browser Browser;
+
+    public Configurator()
     {
         IConfiguration config = new ConfigurationBuilder()
             .AddJsonFile(Path.Combine(AppContext.BaseDirectory, "Resources", "appsettings.json"))

@@ -2,9 +2,9 @@
 
 namespace Qase.Entities.TestData;
 
-public static class TestProjectData
+public class TestProjectData
 {
-    public static TestProjectModel ProjectDetails()
+    public TestProjectModel ProjectDetails()
     {
         return new TestProjectModel
         {

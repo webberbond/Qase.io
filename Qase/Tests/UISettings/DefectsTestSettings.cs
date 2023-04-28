@@ -4,7 +4,7 @@ using Qase.Steps;
 
 namespace Qase.Tests.UISettings;
 
-public abstract class DefectsTestSettings : RepositoryTestSettings
+public class DefectsTestSettings : RepositoryTestSettings
 {
     protected readonly DefectsModel DefectsModel = new DefectsModelDataFaker().Generate();
     

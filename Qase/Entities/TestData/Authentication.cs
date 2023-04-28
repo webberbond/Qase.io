@@ -2,9 +2,9 @@
 
 namespace Qase.Entities.TestData;
 
-public abstract class Authentication
+public class Authentication
 {
-    public static UserModel User()
+    public UserModel User()
     {
         return new UserModel
         {
@@ -13,7 +13,7 @@ public abstract class Authentication
         };
     }
     
-    public static UserModel FakeUser()
+    public UserModel FakeUser()
     {
         return new UserModel
         {

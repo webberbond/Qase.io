@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace Qase.Entities.ResponseModels;
+﻿namespace Qase.Entities.ResponseModels;
 
 public class DefectResult
 {

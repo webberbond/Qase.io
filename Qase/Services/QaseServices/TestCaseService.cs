@@ -1,4 +1,5 @@
-﻿using Qase.Entities.Models;
+﻿using System.Net;
+using Qase.Entities.Models;
 using Qase.Entities.ResponseModels;
 using RestSharp;
 
@@ -6,7 +7,7 @@ namespace Qase.Services.QaseServices;
 
 public class TestCaseService : BaseService
 {
-    public async Task<RestResponse<TestCaseModel>> CreateTestCase(string projectCode, TestCaseModel testCaseModel)
+    public async Task<(RestResponse<TestCaseModel>, string)> CreateTestCase(string projectCode, TestCaseModel testCaseModel)
     {
         var postRequest = new RestRequest($"https://api.qase.io/v1/case/{projectCode}", Method.Post).AddJsonBody(new
         {
@@ -16,10 +17,12 @@ public class TestCaseService : BaseService
             postconditions = testCaseModel.PostConditions
         });
         
-        return await RestClient.ExecuteAsync<TestCaseModel>(postRequest);
+        var postResponse =  await RestClient.ExecuteAsync<TestCaseModel>(postRequest);
+
+        return (postResponse, postResponse.Content);
     }
     
-    public async Task GetTestCaseByProjectCode(string projectCode)
+    public async Task<(HttpStatusCode, TestCaseModel, string)> GetTestCaseByProjectCode(string projectCode)
     {
         var getRequest = new RestRequest($"https://api.qase.io/v1/case/{projectCode}/1", Method.Get);
         
@@ -32,7 +35,7 @@ public class TestCaseService : BaseService
             PreConditions = createdCase.Data.result.preconditions,
             PostConditions = createdCase.Data.result.postconditions
         };
-        
-        Assert.That(finishModel, Is.EqualTo(TestCaseModel));
+
+        return (createdCase.StatusCode, finishModel, createdCase.Content);
     }
 }

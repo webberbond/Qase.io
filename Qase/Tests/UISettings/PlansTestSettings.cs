@@ -4,7 +4,7 @@ using Qase.Steps;
 
 namespace Qase.Tests.UISettings;
 
-public abstract class PlansTestSettings : RepositoryTestSettings
+public class PlansTestSettings : RepositoryTestSettings
 {
     protected readonly TestPlanModel TestPlanModel = new TestPlanModelDataFaker().Generate();
 

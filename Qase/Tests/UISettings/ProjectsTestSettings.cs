@@ -5,7 +5,7 @@ using Qase.Utilities;
 
 namespace Qase.Tests.UISettings;
 
-public abstract class ProjectsTestSettings : LoginTestSettings
+public class ProjectsTestSettings : LoginTestSettings
 {
     private readonly TestProjectModel _testProjectModel = new TestProjectModelDataFaker().Generate();
 
@@ -25,9 +25,9 @@ public abstract class ProjectsTestSettings : LoginTestSettings
     [TearDown]
     public void TearDown()
     {
-        ScreenShotter.TakeScreenshot();
-        
-        _projectsPageSteps
+        new ScreenShotter().TakeScreenshot(WebDriver);
+
+       _projectsPageSteps
             .OpenProjectSettings();
         
         var finishModel = new TestProjectModel
